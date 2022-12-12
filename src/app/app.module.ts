@@ -8,6 +8,17 @@ import { HomeComponent } from './components/home/home.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { PostComponent } from './components/post/post.component';
 import { CardComponent } from './components/card/card.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatInputModule} from '@angular/material/input';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatChipsModule} from '@angular/material/chips';
+//import { MatChipList } from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +31,18 @@ import { CardComponent } from './components/card/card.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatExpansionModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatListModule,
+    MatCardModule,
+    MatButtonModule,
+    MatChipsModule,
+   // MatChipList
+
   ],
   providers: [],
   bootstrap: [AppComponent]
