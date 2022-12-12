@@ -1,14 +1,12 @@
 {
-  "users": [
-
-  ],
-
+  "users": [],
   "post": [
-
+    {
+      "title": "Davide",
+      "description": "davide",
+      "emoji": "ciao",
+      "id": 1
+    }
   ],
-
-  "favorites": [
-
-  ]
+  "favorites": []
 }
-

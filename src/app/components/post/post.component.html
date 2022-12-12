@@ -1,1 +1,43 @@
-<p>post works!</p>
+<div class="container">
+    <form class="example-form" #form="ngForm" (ngSubmit)="getPost(form)">
+        <mat-form-field class="example-full-width">
+          <mat-label>Titolo</mat-label>
+          <input matInput type="text" required name="title" #title="ngModel" ngModel id="title">
+          <mat-error *ngIf="title.touched && title.invalid" ngModule>
+            Please enter a valid title address
+          </mat-error>
+          <mat-error *ngIf="title.touched && title.invalid">
+            Title is <strong>required</strong>
+          </mat-error>
+        </mat-form-field> 
+        <mat-form-field class="example-full-width">
+            <mat-label>Description</mat-label>
+            <input matInput type="text" required name="description" #description="ngModel" ngModel id="description">
+            <mat-error *ngIf="description.touched && description.invalid" ngModule>
+                Please enter a valid description address
+              </mat-error>
+              <mat-error *ngIf="description.touched && description.invalid">
+                Description is <strong>required</strong>
+              </mat-error>
+          </mat-form-field>
+    
+         
+            <mat-form-field appearance="fill" class="example-full-width">
+                <mat-label>
+                    <mat-icon> sentiment_satisfied_alt</mat-icon>
+                </mat-label>
+                <mat-select  matSelect required name="emoji" #emoji="ngModel"ngModel id="emoji" >
+                  <mat-option value="ciao">Ciao</mat-option>
+                </mat-select>
+                
+                <mat-error *ngIf="emoji.touched && emoji.invalid" ngModule>
+                    Please enter a valid emoji address
+                  </mat-error>
+                  <mat-error *ngIf="emoji.touched && emoji.invalid">
+                    Emoji is <strong>required</strong>
+                  </mat-error>
+              </mat-form-field>
+              
+              <button type="submit" mat-raised-button color="primary">Primary</button>
+      </form>
+</div>
