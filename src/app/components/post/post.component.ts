@@ -12,24 +12,25 @@ import { PostService } from 'src/app/service/post.service';
 })
 export class PostComponent implements OnInit {
 
-  constructor(private postSrv:PostService) { }
+  constructor(private postSrv: PostService) { }
 
   ngOnInit(): void {
   }
 
-  getPost(form: NgForm){
+  sendPost(form: NgForm) {
     let data: PostGet = {
       title: form.value.title,
       description: form.value.description,
-      emoji: form.value.emoji
+      emoji: form.value.emoji,
+      commenti: []
     }
 
-    this.postSrv.posta(data).pipe(catchError(err =>{
+    this.postSrv.posta(data).pipe(catchError(err => {
       console.log(err);
       throw err
-    })).subscribe(res=>{
+    })).subscribe(res => {
       console.log(res);
-      
+
     })
   }
 

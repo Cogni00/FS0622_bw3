@@ -1,0 +1,26 @@
+mat-card {
+    width: 50%;
+    margin: 10px auto 0;
+}
+
+.display {
+    display: none;
+}
+
+.comment-form {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+
+    #comment {
+        width: 100%;
+    }
+
+    mat-form-field {
+        padding-bottom: 30px;
+    }
+
+    button {
+        width: 20%;
+    }
+}

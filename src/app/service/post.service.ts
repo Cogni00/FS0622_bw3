@@ -10,10 +10,17 @@ export class PostService {
 
   urlPath = ' http://localhost:4201/post'
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  posta(data:PostGet){
-    return this.http.post<PostGet>(this.urlPath,data).pipe(catchError(err =>{
+  posta(data: PostGet) {
+    return this.http.post<PostGet>(this.urlPath, data).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    }))
+  }
+
+  getPost() {
+    return this.http.get<Post[]>(this.urlPath).pipe(catchError(err => {
       console.log(err);
       throw err
     }))
