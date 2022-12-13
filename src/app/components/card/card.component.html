@@ -36,12 +36,8 @@
             <mat-label>Scrivi un commento</mat-label>
 
             <input type="text" matInput required name="comment" #comment="ngModel" ngModel id="comment">
-
             <mat-error *ngIf="comment.touched && comment.invalid">
-                Please enter a valid email address
-            </mat-error>
-            <mat-error *ngIf="comment.touched && comment.invalid">
-                Email is <strong>required</strong>
+                Non ha inserito il <strong>commento</strong> 
             </mat-error>
         </mat-form-field>
         <button type="submit" mat-raised-button color="primary">+</button>

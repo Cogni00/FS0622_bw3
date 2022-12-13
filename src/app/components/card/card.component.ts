@@ -12,6 +12,7 @@ import { PostService } from 'src/app/service/post.service';
 export class CardComponent implements OnInit {
 
   @Input() p!: any
+  
 
   constructor(private postSrv: PostService) { }
 
@@ -26,14 +27,21 @@ export class CardComponent implements OnInit {
       commenti: p.commenti
     }
     let y = form.value.comment
-    let x = data.commenti.push(y)
-    this.postSrv.postComment(data, p.id).pipe(catchError(err => {
-      console.log(err);
-      throw err
-    })).subscribe((res => {
-      console.log(res);
-      res
-    }))
+    
+    if(y){
+      let x = data.commenti.push(y)
+      this.postSrv.postComment(data, p.id).subscribe((res => {
+        console.log(res);
+        res
+      }))
+    }else if(y = ''){
+      catchError(err => {
+        console.log(err);
+        throw err
+      })
+    }
+
+    form.reset()
   }
 
   openMore(id: number) {
