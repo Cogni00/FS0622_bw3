@@ -45,5 +45,11 @@
       "id": 9
     }
   ],
-  "favorites": []
+  "favorites": [
+    {
+      "postId": 8,
+      "userId": 1,
+      "id": 1
+    }
+  ]
 }

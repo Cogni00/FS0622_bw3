@@ -18,13 +18,50 @@ export class CardComponent implements OnInit {
 
   data!: string
 
+  isFav: boolean = false
+  preferiti: any
+
 
   constructor(private postSrv: PostService) { }
 
   ngOnInit(): void {
+    this.getFavorites()
     this.getName()
     this.formaData()
   }
+
+  getFavorites() {
+    this.postSrv.getFav().subscribe((res) => {
+      let favorites = res
+      let x = favorites.find((f: any) => f.postId == this.p.id)
+      if (x) {
+        this.isFav = true
+        this.preferiti = x
+      } else {
+        this.isFav = false
+      }
+    })
+  }
+
+
+  like(id: number) {
+    this.getFavorites()
+    this.postSrv.aggiungiLike(id).subscribe(res => {
+      console.log(res);
+      this.isFav = true
+    })
+  }
+
+  rimuoviLike() {
+    this.postSrv.deleteLike(this.preferiti.id).subscribe(res => {
+      console.log(res);
+    })
+    this.isFav = false
+  }
+
+
+
+
 
   sendComment(form: NgForm, p: Post) {
     let data: PostGet = {
@@ -33,7 +70,7 @@ export class CardComponent implements OnInit {
       emoji: p.emoji,
       commenti: p.commenti,
       date: p.date,
-      user_id:p.user_id
+      user_id: p.user_id
     }
     let y = form.value.comment
 
@@ -59,10 +96,11 @@ export class CardComponent implements OnInit {
   }
 
   getName() {
-    let x: any = localStorage.getItem('user')
-    let y = JSON.parse(x)
-    this.name = y.user.name
-    this.surname = y.user.surname
+    this.postSrv.getName(this.p.user_id).subscribe(res => {
+      let user = res
+      this.name = user.name
+      this.surname = user.surname
+    })
   }
 
   formaData() {

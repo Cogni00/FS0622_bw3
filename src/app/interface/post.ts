@@ -1,6 +1,6 @@
 export interface Post {
     id: number,
-    user_id:number,
+    user_id: number,
     title: string,
     description: string,
     emoji: string,
@@ -8,7 +8,7 @@ export interface Post {
     date: {}
 }
 export interface PostGet {
-    user_id:number,
+    user_id: number,
     title: string,
     description: string,
     emoji: string,
@@ -18,4 +18,17 @@ export interface PostGet {
 
 export interface CommentPost {
     comment: string
+}
+
+export interface User {
+    email: string,
+    password: string,
+    name: string,
+    surname: string,
+    id: number
+}
+
+export interface Like {
+    postId: number,
+    userId: number
 }
