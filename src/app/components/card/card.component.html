@@ -23,7 +23,7 @@
 
 <mat-card-actions>
     <button mat-button (click)=" isFav ? rimuoviLike() : like(p.id)"
-        [color]=" isFav ? 'primary':''"><mat-icon>thumb_up</mat-icon> Mi piace</button>
+        [color]=" isFav ? 'primary':''"><mat-icon>thumb_up</mat-icon>Mi piace {{count}}</button>
     <button mat-button> <mat-icon> chat_bubble_outline</mat-icon> Commenta </button>
 </mat-card-actions>
 

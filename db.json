@@ -13,6 +13,13 @@
       "name": "Davide",
       "surname": "Alfonsi",
       "id": 2
+    },
+    {
+      "email": "prova1@hotmail.it",
+      "password": "$2a$10$2jWZ2C7SVi7XcbNLxh1emevdTUg1y6YfZSqP27qDRUT85p4j2ratu",
+      "name": "Lorenzo",
+      "surname": "Altomonte",
+      "id": 3
     }
   ],
   "post": [
@@ -50,6 +57,16 @@
       "postId": 8,
       "userId": 1,
       "id": 1
+    },
+    {
+      "postId": 9,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "postId": 8,
+      "userId": 2,
+      "id": 3
     }
   ]
 }

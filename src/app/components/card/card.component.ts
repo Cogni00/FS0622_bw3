@@ -21,13 +21,22 @@ export class CardComponent implements OnInit {
   isFav: boolean = false
   preferiti: any
 
+  count: number = 0
 
   constructor(private postSrv: PostService) { }
 
   ngOnInit(): void {
     this.getFavorites()
+    this.getPostFav()
     this.getName()
     this.formaData()
+  }
+
+  getPostFav() {
+    this.postSrv.getCountFav(this.p.id).subscribe(res => {
+      let temp = res
+      this.count = temp.length
+    })
   }
 
   getFavorites() {
@@ -36,6 +45,7 @@ export class CardComponent implements OnInit {
       let x = favorites.find((f: any) => f.postId == this.p.id)
       if (x) {
         this.isFav = true
+        this.count++
         this.preferiti = x
       } else {
         this.isFav = false
@@ -46,6 +56,7 @@ export class CardComponent implements OnInit {
 
   like(id: number) {
     this.getFavorites()
+    this.getPostFav()
     this.postSrv.aggiungiLike(id).subscribe(res => {
       console.log(res);
       this.isFav = true
@@ -57,6 +68,7 @@ export class CardComponent implements OnInit {
       console.log(res);
     })
     this.isFav = false
+    this.count--
   }
 
 
