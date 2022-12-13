@@ -10,9 +10,11 @@ import { PostService } from 'src/app/service/post.service';
 })
 export class HomeComponent implements OnInit {
 
+
   posts: Post[] = []
 
   constructor(private postSrv: PostService) { }
+
 
   ngOnInit(): void {
     this.getPost();

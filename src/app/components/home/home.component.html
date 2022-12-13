@@ -1,8 +1,31 @@
 <mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+  <mat-drawer mode="side" opened>
+    <mat-list role="list">
+      <mat-list-item role="listitem"><mat-icon>home</mat-icon> <a [routerLink]="['/home']">Home</a></mat-list-item>
+      <mat-list-item role="listitem"><mat-icon>account_circle</mat-icon>Nome Utente</mat-list-item>
+      <mat-list-item role="listitem"><mat-icon>exit_to_app</mat-icon> Logout</mat-list-item>
+    </mat-list>
+  </mat-drawer>
   <mat-drawer-content>
-    <mat-card class="example-card" *ngFor="let p of posts">
+    <div class="saluta">
+      <mat-chip-list aria-label="Dog selection">
+        <mat-chip>
+          <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+          Ciao Ilaria!
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+    
+   <mat-card class="example-card" *ngFor="let p of posts">
       <app-card [p]="p"></app-card>
     </mat-card>
+
   </mat-drawer-content>
 </mat-drawer-container>
+
+
+<!-- Home
+nome utente + accordion( profilo, logout)
+nuovo post
+(cerca)
+-->
