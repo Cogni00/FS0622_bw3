@@ -1,6 +1,16 @@
 {
   "users": [
 
+    {
+      "email": "prova@hotmail.it",
+      "password": "$2a$10$2sblhqwoXvrM2tPjLyeCGeg3S8Pm0nfc2GlNs7twwFBI52Q22FaD6",
+      "name": "lorenzo",
+      "id": 1
+    }
+  ]
+}
+
+
   ],
 
   "post": [
@@ -11,4 +21,5 @@
 
   ]
 }
+
 
