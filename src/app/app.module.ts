@@ -7,6 +7,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './components/home/home.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { PostComponent } from './components/post/post.component';
+import { CardComponent } from './components/card/card.component';
 
 import {
   ErrorStateMatcher,
@@ -23,7 +27,9 @@ import { TokenInterceptor } from './auth/token.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PostComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,9 @@ import { TokenInterceptor } from './auth/token.interceptor';
     MatCardModule,
     FormsModule,
     HttpClientModule,
-    AuthModule
+    AuthModule,
+    BrowserAnimationsModule,
+    MatSidenavModule
   ],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
