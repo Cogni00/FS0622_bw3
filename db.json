@@ -1,5 +1,7 @@
 {
+
   "users": [],
+
   "post": [
     {
       "title": "Ciao",
@@ -34,5 +36,7 @@
       "id": 4
     }
   ],
+
   "favorites": []
 }
+
