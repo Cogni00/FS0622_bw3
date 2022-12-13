@@ -6,77 +6,43 @@
       "name": "Lorenzo",
       "surname": "De Carolis",
       "id": 1
+    },
+    {
+      "email": "davide@david.it",
+      "password": "$2a$10$SNbPQMHskKBTSvcYnanahe6o57apbCVI2cPtBXV41KD7vM1Glf7Qm",
+      "name": "Davide",
+      "surname": "Alfonsi",
+      "id": 2
     }
   ],
   "post": [
     {
-      "title": "Ciao",
-      "description": "aidhjaowuhdiuawhdiuahwdiubhwd",
-      "emoji": "Felice",
-      "commenti": [],
-      "id": 1,
-      "date": {
-        "mese": 11,
-        "giorno": 13,
-        "ora": 15,
-        "minuti": 9
-      }
-    },
-    {
-      "title": "efefesf",
-      "description": "esfsefe",
-      "emoji": "Felice",
-      "commenti": [
-        "bellissimo",
-        "Ciao",
-        "si"
-      ],
-      "id": 2,
-      "date": {
-        "mese": 11,
-        "giorno": 13,
-        "ora": 15,
-        "minuti": 9
-      }
-    },
-    {
-      "title": "Novita",
-      "description": "gahagahahhahahaha",
-      "emoji": "Felice",
-      "commenti": [],
-      "id": 3,
-      "date": {
-        "mese": 11,
-        "giorno": 13,
-        "ora": 15,
-        "minuti": 9
-      }
-    },
-    {
-      "title": "Italia ai mondiali!!!",
-      "description": "È universalmente riconosciuto che un lettore che osserva il layout di una pagina viene distratto dal contenuto testuale se questo è leggibile. Lo scopo dell’utilizzo del Lorem Ipsum è che offre una normale distribuzione delle lettere (al contrario di quanto avviene se si utilizzano brevi frasi ripetute, ad esempio “testo qui”), apparendo come un normale blocco di testo leggibile. Molti software di impaginazione e di web design utilizzano Lorem Ipsum come testo modello. Molte versioni del testo sono state prodotte negli anni, a volte casualmente, a volte di proposito (ad esempio inserendo passaggi ironici).",
-      "emoji": "Felice",
-      "commenti": [],
-      "id": 4,
-      "date": {
-        "mese": 11,
-        "giorno": 13,
-        "ora": 15,
-        "minuti": 9
-      }
-    },
-    {
-      "title": "Prova data",
-      "description": "wadawdawdwadwd",
-      "emoji": "tag_faces",
+      "user_id": 1,
+      "title": "AAAA",
+      "description": "BBBBBBBBBBBBBBBBB",
+      "emoji": "Pensieroso",
       "commenti": [],
       "date": {
         "mese": 11,
         "giorno": 13,
         "ora": 15,
-        "minuti": 9
+        "minuti": 53
       },
-      "id": 5
+      "id": 8
+    },
+    {
+      "user_id": 2,
+      "title": "aaaa",
+      "description": "vvvvvvvvvvvv",
+      "emoji": "Felicissimo",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 13,
+        "ora": 15,
+        "minuti": 55
+      },
+      "id": 9
     }
   ],
   "favorites": []

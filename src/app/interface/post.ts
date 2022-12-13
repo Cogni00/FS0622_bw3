@@ -1,5 +1,6 @@
 export interface Post {
     id: number,
+    user_id:number,
     title: string,
     description: string,
     emoji: string,
@@ -7,6 +8,7 @@ export interface Post {
     date: {}
 }
 export interface PostGet {
+    user_id:number,
     title: string,
     description: string,
     emoji: string,

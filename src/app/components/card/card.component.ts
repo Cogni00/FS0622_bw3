@@ -32,7 +32,8 @@ export class CardComponent implements OnInit {
       description: p.description,
       emoji: p.emoji,
       commenti: p.commenti,
-      date: p.date
+      date: p.date,
+      user_id:p.user_id
     }
     let y = form.value.comment
 
