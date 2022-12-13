@@ -1,11 +1,22 @@
+// GENERALI
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// MATERIAL
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
+// COMPONENT
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
-import { MatSidenavModule} from '@angular/material/sidenav';
+
 import { PostComponent } from './components/post/post.component';
 import { CardComponent } from './components/card/card.component';
 import { MatExpansionModule} from '@angular/material/expansion';
@@ -18,6 +29,8 @@ import { MatCardModule} from '@angular/material/card';
 import { MatButtonModule} from '@angular/material/button';
 import { MatChipsModule} from '@angular/material/chips';
 import { MatChipList } from '@angular/material/chips';
+import { MatSidenavModule} from '@angular/material/sidenav';
+
 
 
 @NgModule({
@@ -33,18 +46,22 @@ import { MatChipList } from '@angular/material/chips';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatExpansionModule,
+    HttpClientModule,
     MatInputModule,
-    MatToolbarModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSelectModule,
     MatIconModule,
-    MatMenuModule,
-    MatListModule,
-    MatCardModule,
     MatButtonModule,
-    MatChipsModule,
+    MatCardModule,
+    MatChipsModule    
+    MatExpansionModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatListModule
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent ]
 })
 export class AppModule { }

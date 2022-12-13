@@ -1,8 +1,17 @@
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+
+.example-card {
+    width: 30%;
+    margin: 10px auto 50px;
+    border: 1px solid lightgrey;
+}
+
 
 .example-container {
   width: 100%;
@@ -40,21 +49,4 @@ mat-icon {
 p {
   font-size: 16px;
 }
-
-.example-card {
-  max-width: 400px;
-  margin-top: 30px;
-}
-
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 
