@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError } from 'rxjs';
-import { CommentPost, Post, PostGet } from '../interface/post';
+import { CommentPost, Like, Post, PostGet, User } from '../interface/post';
 
 @Injectable({
 
@@ -28,11 +28,46 @@ export class PostService {
     }))
   }
 
-  postComment(data:PostGet , id:number){
-    return this.http.put<PostGet>(this.urlPath + `/${id}`, data).pipe(catchError(err =>{
+  postComment(data: PostGet, id: number) {
+    return this.http.put<PostGet>(this.urlPath + `/${id}`, data).pipe(catchError(err => {
       console.log(err);
       throw err
     }))
+  }
+
+  getName(id: number) {
+    return this.http.get<User>('http://localhost:4201/users/' + id)
+  }
+
+  aggiungiLike(id: number) {
+    let takeUser: any = localStorage.getItem('user')
+    let user = JSON.parse(takeUser)
+    let uId = user.user.id
+
+    let newLike: Like = {
+      postId: id,
+      userId: uId
+    }
+
+    return this.http.post<Like>('http://localhost:4201/favorites', newLike).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    }))
+  }
+
+  getFav() {
+    let takeUser: any = localStorage.getItem('user')
+    let user = JSON.parse(takeUser)
+    let uId = user.user.id
+
+    return this.http.get<Like[]>(`http://localhost:4201/favorites?userId=${uId}`).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    }))
+  }
+
+  deleteLike(id: number) {
+    return this.http.delete(`http://localhost:4201/favorites/${id}`)
   }
 
 }
