@@ -13,6 +13,7 @@ import { PostService } from 'src/app/service/post.service';
 export class PostComponent implements OnInit {
 
   newDate!: {}
+  user_id!:number
 
   constructor(private postSrv: PostService) { }
 
@@ -22,7 +23,9 @@ export class PostComponent implements OnInit {
 
   sendPost(form: NgForm) {
     this.getDate()
+    this.getUserId()
     let data: PostGet = {
+      user_id:this.user_id,
       title: form.value.title,
       description: form.value.description,
       emoji: form.value.emoji,
@@ -52,6 +55,13 @@ export class PostComponent implements OnInit {
       minuti: mi
     }
     this.newDate = orario
-
   }
+
+
+  getUserId(){
+    let x: any = localStorage.getItem('user')
+    let y = JSON.parse(x)
+    this.user_id = y.user.id
+  }
+
 }
