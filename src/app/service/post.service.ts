@@ -4,13 +4,14 @@ import { catchError } from 'rxjs';
 import { CommentPost, Post, PostGet } from '../interface/post';
 
 @Injectable({
+
   providedIn: 'root'
 })
 export class PostService {
 
   urlPath = ' http://localhost:4201/post'
 
- 
+
   constructor(private http: HttpClient) { }
 
   posta(data: PostGet) {
