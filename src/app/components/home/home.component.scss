@@ -1,17 +1,8 @@
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-
 .example-card {
-    width: 30%;
-    margin: 10px auto 50px;
-    border: 1px solid lightgrey;
+  width: 30%;
+  margin: 10px auto 50px;
+  border: 1px solid lightgrey;
 }
-
 
 .example-container {
   width: 100%;
@@ -20,12 +11,14 @@
 
 }
 
+.mat-drawer {
+  height: 100%;
+}
+
 mat-list {
   width: 30vh;
-  height: 100%;
   padding-top: 50px;
-  padding-bottom:50px;
-
+  padding-bottom: 50px;
 }
 
 a {
@@ -49,4 +42,3 @@ mat-icon {
 p {
   font-size: 16px;
 }
-

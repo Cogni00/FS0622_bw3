@@ -3,15 +3,17 @@ export interface Post {
     title: string,
     description: string,
     emoji: string,
-    commenti: []
+    commenti: [],
+    date: {}
 }
 export interface PostGet {
     title: string,
     description: string,
     emoji: string,
-    commenti:string[]
+    commenti: string[],
+    date: {}
 }
 
-export interface CommentPost{
-    comment:string
+export interface CommentPost {
+    comment: string
 }
