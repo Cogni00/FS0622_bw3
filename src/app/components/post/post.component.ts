@@ -11,8 +11,8 @@ import { PostService } from 'src/app/service/post.service';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-
   constructor(private postSrv: PostService) { }
+  
 
   ngOnInit(): void {
   }
@@ -33,5 +33,4 @@ export class PostComponent implements OnInit {
 
     })
   }
-
 }

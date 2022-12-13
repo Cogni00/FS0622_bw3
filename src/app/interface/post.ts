@@ -9,5 +9,9 @@ export interface PostGet {
     title: string,
     description: string,
     emoji: string,
-    commenti: []
+    commenti:string[]
+}
+
+export interface CommentPost{
+    comment:string
 }

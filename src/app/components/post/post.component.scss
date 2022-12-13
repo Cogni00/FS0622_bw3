@@ -6,9 +6,8 @@
 
   .example-form {
     min-width: 150px;
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
-    border: 1px solid blue;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -17,5 +16,6 @@
       width: 100%;
       margin-bottom: 30px;
     }
+    
   }
 }

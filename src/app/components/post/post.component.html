@@ -11,7 +11,7 @@
       </mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-      <mat-label>Description</mat-label>
+      <mat-label>A cosa stai pensando oggi?...</mat-label>
       <input matInput type="text" required name="description" #description="ngModel" ngModel id="description">
       <mat-error *ngIf="description.touched && description.invalid" ngModule>
         Please enter a valid description address
@@ -29,9 +29,21 @@
       </mat-label>
       <mat-select matSelect required name="emoji" #emoji="ngModel" ngModel id="emoji">
         <mat-option></mat-option>
-        <mat-option value="Felice">Felice</mat-option>
-        <mat-option value="Triste">Triste</mat-option>
-        <mat-option value="Pensieroso">Pensieroso</mat-option>
+        <mat-option value="tag_faces">
+        <mat-icon>tag_faces</mat-icon>
+        </mat-option>
+        <mat-option value="Triste">
+          <mat-icon>mood_bad</mat-icon>
+        </mat-option>
+        <mat-option value="Bhoo">
+          <mat-icon>sentiment_dissatisfied</mat-icon>
+        </mat-option>
+        <mat-option value="Pensieroso">
+          <mat-icon>sentiment_satisfied</mat-icon>
+        </mat-option>
+        <mat-option value="Felicissimo">
+          <mat-icon>sentiment_very_satisfied</mat-icon>
+        </mat-option>
       </mat-select>
 
       <mat-error *ngIf="emoji.touched && emoji.invalid" ngModule>
@@ -41,7 +53,7 @@
         Emoji is <strong>required</strong>
       </mat-error>
     </mat-form-field>
-
     <button type="submit" mat-raised-button color="primary">Pubblica</button>
   </form>
 </div>
+
