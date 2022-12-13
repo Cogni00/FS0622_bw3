@@ -13,36 +13,57 @@
       "name": "Davide",
       "surname": "Alfonsi",
       "id": 2
+    },
+    {
+      "email": "luca@david.it",
+      "password": "$2a$10$2mSkGEHe2fyt3wpspmjDnezboc91eUnJZwpmCWpQSuBX4MYEuzmd6",
+      "name": "Luca",
+      "surname": "Alfonsi",
+      "id": 3
     }
   ],
   "post": [
     {
-      "user_id": 1,
-      "title": "AAAA",
-      "description": "BBBBBBBBBBBBBBBBB",
-      "emoji": "Pensieroso",
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 13,
-        "ora": 15,
-        "minuti": 53
-      },
-      "id": 8
-    },
-    {
-      "user_id": 2,
       "title": "aaaa",
-      "description": "vvvvvvvvvvvv",
-      "emoji": "Felicissimo",
+      "description": "sssss",
+      "emoji": "Pensieroso",
+      "id": 9,
+      "user_id": 2,
       "commenti": [],
       "date": {
         "mese": 11,
         "giorno": 13,
         "ora": 15,
         "minuti": 55
+      }
+    },
+    {
+      "user_id": 2,
+      "title": "aaaaa",
+      "description": "ciao",
+      "emoji": "tag_faces",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 13,
+        "ora": 19,
+        "minuti": 13
       },
-      "id": 9
+      "id": 10
+    },
+    {
+      "user_id": 3,
+      "title": "ff",
+      "description": "yyyyyyyyy",
+      "emoji": "Triste",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 13,
+        "ora": 19,
+        "minuti": 39
+      },
+      "id": 11
     }
   ],
   "favorites": [
@@ -50,6 +71,11 @@
       "postId": 8,
       "userId": 1,
       "id": 1
+    },
+    {
+      "postId": 8,
+      "userId": 2,
+      "id": 2
     }
   ]
 }

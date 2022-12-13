@@ -20,6 +20,14 @@ export interface CommentPost {
     comment: string
 }
 
+export interface PostPut{
+    id:number,
+    description: string,
+    emoji: string,
+    commenti: string[],
+    date: {}
+}
+
 export interface User {
     email: string,
     password: string,
