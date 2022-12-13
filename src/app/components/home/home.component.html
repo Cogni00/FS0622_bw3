@@ -3,22 +3,27 @@
     <mat-list role="list">
       <mat-list-item role="listitem"><mat-icon>home</mat-icon> <a [routerLink]="['']">Home</a></mat-list-item>
       <mat-list-item role="listitem"><mat-icon>account_circle</mat-icon>Nome Utente</mat-list-item>
-      <mat-list-item role="listitem"><mat-icon>exit_to_app</mat-icon> Logout</mat-list-item>
+      <mat-list-item role="listitem"> <button mat-raised-button color="warn"
+          (click)="logout()"><mat-icon>exit_to_app</mat-icon>
+          Logout</button></mat-list-item>
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
     <div class="saluta">
       <mat-chip-list aria-label="Dog selection">
         <mat-chip>
-          <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
-          Ciao Ilaria!
+          <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+            alt="Photo of a Shiba Inu" />
+          Ciao {{name}}
         </mat-chip>
       </mat-chip-list>
     </div>
 
-   <mat-card class="example-card" *ngFor="let p of posts">
+    <mat-card class="example-card" *ngFor="let p of posts">
       <app-card [p]="p"></app-card>
     </mat-card>
+
+    <app-post></app-post>
 
   </mat-drawer-content>
 </mat-drawer-container>

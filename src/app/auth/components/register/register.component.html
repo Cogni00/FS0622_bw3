@@ -2,58 +2,25 @@
   <mat-card class="card">
     <mat-card-title class="mb">Registrati</mat-card-title>
     <mat-card-content>
-        <form class="example-form" #form="ngForm" (ngSubmit)="onsubmit(form)">
-        <mat-form-field
-          class="example-full-width"
-          appearance="fill"
-          color="accent"
-        >
+      <form class="example-form" #form="ngForm" (ngSubmit)="onsubmit(form)">
+        <mat-form-field class="example-full-width" appearance="fill" color="accent">
           <mat-label>Nome</mat-label>
-          <input
-            matInput
-            placeholder="Nome"
-            type="text"
-            #name="ngModel"
-            ngModel
-            name="name"
-            required
-          />
+          <input matInput placeholder="Nome" type="text" #name="ngModel" ngModel name="name" required />
         </mat-form-field>
 
-        <mat-form-field
-          class="example-full-width"
-          appearance="fill"
-          color="accent"
-          type="text"
-        >
+        <mat-form-field class="example-full-width" appearance="fill" color="accent">
+          <mat-label>Cognome</mat-label>
+          <input matInput placeholder="Cognome" type="text" #surname="ngModel" ngModel name="surname" required />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill" color="accent" type="text">
           <mat-label>Email</mat-label>
-          <input
-            matInput
-            placeholder="Email"
-            type="email"
-            #email="ngModel"
-            ngModel
-            name="email"
-            required
-          />
+          <input matInput placeholder="Email" type="email" #email="ngModel" ngModel name="email" required />
         </mat-form-field>
 
-        <mat-form-field
-          class="example-full-width"
-          appearance="fill"
-          color="accent"
-          type="email"
-        >
+        <mat-form-field class="example-full-width" appearance="fill" color="accent" type="email">
           <mat-label>Password</mat-label>
-          <input
-            matInput
-            type="password"
-            #password="ngModel"
-            placeholder="Password"
-            ngModel
-            name="password"
-            required
-          />
+          <input matInput type="password" #password="ngModel" placeholder="Password" ngModel name="password" required />
         </mat-form-field>
         <mat-card-actions>
           <div class="center">
@@ -63,11 +30,11 @@
           </div>
         </mat-card-actions>
       </form>
-      </mat-card-content>
+    </mat-card-content>
     <mat-card-footer>
       <p>
         Sei già registrato?
-        <span class="ul" [routerLink]="'/login'" >Accedi!</span>
+        <span class="ul" [routerLink]="'/login'">Accedi!</span>
       </p>
     </mat-card-footer>
   </mat-card>
