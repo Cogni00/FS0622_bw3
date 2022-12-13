@@ -7,7 +7,7 @@ import { PostComponent } from './components/post/post.component';
 const routes: Routes = [
 
   {
-    path: "home",
+    path: "",
     component: HomeComponent
   }
 
