@@ -13,21 +13,31 @@
       "name": "Davide",
       "surname": "Alfonsi",
       "id": 2
+    },
+    {
+      "email": "ilaria.cognata@gmail.com",
+      "password": "$2a$10$Gy38xjx5c7vTGk.yQ.nRJegCWZNgf0DDit2lRakTbEM5oj69spOV6",
+      "name": "ilaria",
+      "surname": "cognata",
+      "id": 3
     }
   ],
   "post": [
     {
-      "user_id": 1,
       "title": "AAAA",
       "description": "BBBBBBBBBBBBBBBBB",
       "emoji": "Pensieroso",
-      "commenti": [],
+      "commenti": [
+        "hhhhhh",
+        "yyyyy"
+      ],
       "date": {
         "mese": 11,
         "giorno": 13,
         "ora": 15,
         "minuti": 53
       },
+      "user_id": 1,
       "id": 8
     },
     {
@@ -43,6 +53,20 @@
         "minuti": 55
       },
       "id": 9
+    },
+    {
+      "user_id": 3,
+      "title": "un pensiero per lorenzo ",
+      "description": "oggi mangio le noccioline salate piccanti, brutta cacchetta",
+      "emoji": "Felicissimo",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 13,
+        "ora": 16,
+        "minuti": 52
+      },
+      "id": 10
     }
   ],
   "favorites": [
@@ -50,6 +74,11 @@
       "postId": 8,
       "userId": 1,
       "id": 1
+    },
+    {
+      "postId": 10,
+      "userId": 3,
+      "id": 2
     }
   ]
 }
