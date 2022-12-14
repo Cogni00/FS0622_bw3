@@ -20,15 +20,24 @@
       "name": "Luca",
       "surname": "Alfonsi",
       "id": 3
+    },
+    {
+      "email": "ilaria.cognata@gmail.com",
+      "password": "$2a$10$mZOkhDjCQMEWiw1bGpaW1uqCjrP58vzLqNj5D0OlGJBOlCapPkzqq",
+      "name": "ilaria",
+      "surname": "cognata",
+      "id": 4
     }
   ],
   "post": [
     {
-      "title": "ff",
-      "description": "yyyyyyyyy",
-      "emoji": "Triste",
+      "title": "piove",
+      "description": "cacca",
+      "emoji": "tag_faces",
       "commenti": [
-        "o"
+        "o",
+        "cacca",
+        "cacchetta"
       ],
       "date": {
         "mese": 11,
@@ -38,6 +47,20 @@
       },
       "user_id": 3,
       "id": 11
+    },
+    {
+      "user_id": 4,
+      "title": "piove",
+      "description": "caccone",
+      "emoji": "tag_faces",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 14,
+        "ora": 11,
+        "minuti": 9
+      },
+      "id": 12
     }
   ],
   "favorites": [

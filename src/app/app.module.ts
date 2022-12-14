@@ -34,6 +34,7 @@ import {
 } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     HomeComponent,
     PostComponent,
     CardComponent,
+    DashboardComponent,
 
   ],
   imports: [
