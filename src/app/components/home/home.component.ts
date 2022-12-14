@@ -19,16 +19,9 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.getPost();
     this.getName()
   }
 
-  getPost() {
-    this.postSrv.getPost().subscribe((res) => {
-      this.posts = res
-      console.log(res);
-    })
-  }
 
   getName() {
     let x: any = localStorage.getItem('user')
