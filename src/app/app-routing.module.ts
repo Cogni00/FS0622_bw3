@@ -11,7 +11,6 @@ const routes: Routes = [
     component:HomeComponent,
     canActivate:[AuthGuard],
   }
-
 ];
 
 @NgModule({

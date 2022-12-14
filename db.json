@@ -15,58 +15,29 @@
       "id": 2
     },
     {
-      "email": "ilaria.cognata@gmail.com",
-      "password": "$2a$10$Gy38xjx5c7vTGk.yQ.nRJegCWZNgf0DDit2lRakTbEM5oj69spOV6",
-      "name": "ilaria",
-      "surname": "cognata",
+      "email": "luca@david.it",
+      "password": "$2a$10$2mSkGEHe2fyt3wpspmjDnezboc91eUnJZwpmCWpQSuBX4MYEuzmd6",
+      "name": "Luca",
+      "surname": "Alfonsi",
       "id": 3
     }
   ],
   "post": [
     {
-      "title": "AAAA",
-      "description": "BBBBBBBBBBBBBBBBB",
-      "emoji": "Pensieroso",
+      "title": "ff",
+      "description": "yyyyyyyyy",
+      "emoji": "Triste",
       "commenti": [
-        "hhhhhh",
-        "yyyyy"
+        "o"
       ],
       "date": {
         "mese": 11,
         "giorno": 13,
-        "ora": 15,
-        "minuti": 53
+        "ora": 19,
+        "minuti": 39
       },
-      "user_id": 1,
-      "id": 8
-    },
-    {
-      "user_id": 2,
-      "title": "aaaa",
-      "description": "vvvvvvvvvvvv",
-      "emoji": "Felicissimo",
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 13,
-        "ora": 15,
-        "minuti": 55
-      },
-      "id": 9
-    },
-    {
       "user_id": 3,
-      "title": "un pensiero per lorenzo ",
-      "description": "oggi mangio le noccioline salate piccanti, brutta cacchetta",
-      "emoji": "Felicissimo",
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 13,
-        "ora": 16,
-        "minuti": 52
-      },
-      "id": 10
+      "id": 11
     }
   ],
   "favorites": [
@@ -76,8 +47,8 @@
       "id": 1
     },
     {
-      "postId": 10,
-      "userId": 3,
+      "postId": 8,
+      "userId": 2,
       "id": 2
     }
   ]
