@@ -28,6 +28,17 @@ export class PostService {
     }))
   }
 
+  getPostById() {
+    let takePost: any = localStorage.getItem('user')
+    let post = JSON.parse(takePost)
+    let pId = post.user.id
+    console.log(pId);
+    return this.http.get<Post[]>(`http://localhost:4201/post?user_id=${pId}`).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    }))
+  }
+
   postComment(data: PostGet, id: number) {
     return this.http.put<PostGet>(this.urlPath + `/${id}`, data).pipe(catchError(err => {
       console.log(err);

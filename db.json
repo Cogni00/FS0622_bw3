@@ -27,6 +27,13 @@
       "name": "ilaria",
       "surname": "cognata",
       "id": 4
+    },
+    {
+      "email": "pippo@franco.com",
+      "password": "$2a$10$QXb2HlmY/aXPxo1s5zzvJurzOA7lQEY6awol9cWWQ3iu6vsUzne3m",
+      "name": "Pippo",
+      "surname": "Franco",
+      "id": 5
     }
   ],
   "post": [
