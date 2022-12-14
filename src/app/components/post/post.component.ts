@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { catchError } from 'rxjs';
+import { PostGet } from 'src/app/interface/post';
+import { PostService } from 'src/app/service/post.service';
+
 
 @Component({
   selector: 'app-post',
@@ -7,9 +12,57 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
+  newDate!: {}
+  user_id!:number
+
+  constructor(private postSrv: PostService) { }
+
 
   ngOnInit(): void {
+  }
+
+
+  sendPost(form: NgForm) {
+    this.getDate()
+    this.getUserId()
+    let data: PostGet = {
+      user_id:this.user_id,
+      title: form.value.title,
+      description: form.value.description,
+      emoji: form.value.emoji,
+      commenti: [],
+      date: this.newDate
+    }
+
+    this.postSrv.posta(data).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    })).subscribe(res => {
+      console.log(res);
+
+    })
+  }
+
+  getDate() {
+    let date = new Date()
+    let m = date.getMonth()
+    let d = date.getDate()
+    let h = date.getHours()
+    let mi = date.getMinutes()
+    let orario = {
+      mese: m,
+      giorno: d,
+      ora: h,
+      minuti: mi
+    }
+    this.newDate = orario
+  }
+
+
+  getUserId(){
+    let x: any = localStorage.getItem('user')
+    let y = JSON.parse(x)
+    this.user_id = y.user.id
   }
 
 }

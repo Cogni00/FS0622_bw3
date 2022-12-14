@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
+import { Post } from 'src/app/interface/post';
+import { PostService } from 'src/app/service/post.service';
 
 
 @Component({
@@ -8,9 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+
+  posts: Post[] = []
+  name!: string
+
+  constructor(private postSrv: PostService, private authSrv: AuthService) { }
+
 
   ngOnInit(): void {
+    this.getName()
+  }
+
+
+  getName() {
+    let x: any = localStorage.getItem('user')
+    let y = JSON.parse(x)
+    this.name = y.user.name
+  }
+
+  logout() {
+    this.authSrv.logout()
   }
 
 }
