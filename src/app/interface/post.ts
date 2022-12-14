@@ -4,7 +4,7 @@ export interface Post {
     title: string,
     description: string,
     emoji: string,
-    commenti: [],
+    commenti: object[],
     date: {}
 }
 export interface PostGet {
@@ -12,19 +12,19 @@ export interface PostGet {
     title: string,
     description: string,
     emoji: string,
-    commenti: string[],
+    commenti: object[],
     date: {}
 }
 
 export interface CommentPost {
-    comment: string
+    comment: {}
 }
 
-export interface PostPut{
-    id:number,
+export interface PostPut {
+    id: number,
     description: string,
     emoji: string,
-    commenti: string[],
+    commenti: object[],
     date: {}
 }
 

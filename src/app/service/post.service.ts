@@ -93,5 +93,12 @@ export class PostService {
     return this.http.delete(`http://localhost:4201/favorites/${id}`)
   }
 
+  getCountFav(id: number) {
+    return this.http.get<Like[]>(`http://localhost:4201/favorites?postId=${id}`).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    }))
+  }
+
 }
 

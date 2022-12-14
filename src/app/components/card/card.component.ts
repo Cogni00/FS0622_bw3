@@ -17,15 +17,24 @@ export class CardComponent implements OnInit {
 
   name!: string
   surname!: string
+  id!: number
+
+  loggedName!: string
+  loggedSurname!: string
+  loggedId!: number
 
   data!: string
 
   isFav: boolean = false
   preferiti: any
 
+
   newTitle: string = ''
   newDescription: string = ''
   newEmoji: string = ''
+
+  count: number = 0
+
 
 
   @ViewChild('form') form!: NgForm
@@ -35,8 +44,25 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getFavorites()
+    this.getPostFav()
+    this.getLoggedName()
     this.getName()
     this.formaData()
+  }
+
+  getLoggedName() {
+    let a: any = localStorage.getItem('user')
+    let b = JSON.parse(a)
+    this.loggedName = b.user.name
+    this.loggedSurname = b.user.surname
+    this.loggedId = b.user.id
+  }
+
+  getPostFav() {
+    this.postSrv.getCountFav(this.p.id).subscribe(res => {
+      let temp = res
+      this.count = temp.length
+    })
   }
 
   getFavorites() {
@@ -45,6 +71,7 @@ export class CardComponent implements OnInit {
       let x = favorites.find((f: any) => f.postId == this.p.id)
       if (x) {
         this.isFav = true
+        this.count++
         this.preferiti = x
       } else {
         this.isFav = false
@@ -54,10 +81,12 @@ export class CardComponent implements OnInit {
 
 
   like(id: number) {
-    this.getFavorites()
+
     this.postSrv.aggiungiLike(id).subscribe(res => {
       console.log(res);
       this.isFav = true
+      this.getFavorites()
+      this.getPostFav()
     })
   }
 
@@ -66,11 +95,12 @@ export class CardComponent implements OnInit {
       console.log(res);
     })
     this.isFav = false
+    this.count--
   }
 
 
-  elimina(id:number){
-    this.postSrv.eliminaPost(id).subscribe(res=>{
+  elimina(id: number) {
+    this.postSrv.eliminaPost(id).subscribe(res => {
       res
     })
     window.location.reload()
@@ -78,12 +108,14 @@ export class CardComponent implements OnInit {
 
 
   visualizzaDati(p: Post) {
-      let data = {
-        newTitle: p.title,
-        newDescription: p.description,
-        newEmoji: p.emoji
-      }
-      this.form.setValue(data)
+    console.log('funziono');
+
+    let data = {
+      newTitle: p.title,
+      newDescription: p.description,
+      newEmoji: p.emoji
+    }
+    this.form.setValue(data)
   }
 
 
@@ -103,9 +135,6 @@ export class CardComponent implements OnInit {
     window.location.reload()
   }
 
-
-
-
   sendComment(form: NgForm, p: Post) {
     let data: PostGet = {
       title: p.title,
@@ -118,7 +147,12 @@ export class CardComponent implements OnInit {
     let y = form.value.comment
 
     if (y) {
-      let x = data.commenti.push(y)
+      let newComment = {
+        comment: y,
+        userName: this.loggedName,
+        userSurname: this.loggedSurname
+      }
+      let x = data.commenti.push(newComment)
       this.postSrv.postComment(data, p.id).subscribe((res => {
         console.log(res);
         res
@@ -133,6 +167,7 @@ export class CardComponent implements OnInit {
     form.reset()
   }
 
+
   openMore(id: number) {
     let more = document.getElementById('moreOption' + id)
     more!.classList.toggle('toggle');
@@ -143,6 +178,7 @@ export class CardComponent implements OnInit {
       let user = res
       this.name = user.name
       this.surname = user.surname
+      this.id = user.id
     })
   }
 

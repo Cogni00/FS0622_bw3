@@ -36,6 +36,8 @@
         Sei già registrato?
         <span class="ul" [routerLink]="'/login'">Accedi!</span>
       </p>
+
+      <h2 *ngIf="err" class="text-danger mt-3">{{err}}</h2>
     </mat-card-footer>
   </mat-card>
 </div>
