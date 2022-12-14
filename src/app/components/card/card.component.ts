@@ -69,6 +69,13 @@ export class CardComponent implements OnInit {
   }
 
 
+  elimina(id:number){
+    this.postSrv.eliminaPost(id).subscribe(res=>{
+      res
+    })
+    window.location.reload()
+  }
+
 
   visualizzaDati(p: Post) {
       let data = {

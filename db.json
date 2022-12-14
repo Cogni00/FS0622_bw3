@@ -24,45 +24,19 @@
   ],
   "post": [
     {
-      "title": "aaaa",
-      "description": "sssss",
-      "emoji": "Pensieroso",
-      "id": 9,
-      "user_id": 2,
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 13,
-        "ora": 15,
-        "minuti": 55
-      }
-    },
-    {
-      "user_id": 2,
-      "title": "aaaaa",
-      "description": "ciao",
-      "emoji": "tag_faces",
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 13,
-        "ora": 19,
-        "minuti": 13
-      },
-      "id": 10
-    },
-    {
-      "user_id": 3,
       "title": "ff",
       "description": "yyyyyyyyy",
       "emoji": "Triste",
-      "commenti": [],
+      "commenti": [
+        "o"
+      ],
       "date": {
         "mese": 11,
         "giorno": 13,
         "ora": 19,
         "minuti": 39
       },
+      "user_id": 3,
       "id": 11
     }
   ],
