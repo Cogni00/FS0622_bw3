@@ -3,6 +3,7 @@ export interface Post {
     user_id: number,
     title: string,
     description: string,
+    img:string,
     emoji: string,
     commenti: [],
     date: {}
@@ -12,6 +13,7 @@ export interface PostGet {
     title: string,
     description: string,
     emoji: string,
+    img:string,
     commenti: string[],
     date: {}
 }
@@ -24,6 +26,7 @@ export interface PostPut{
     id:number,
     description: string,
     emoji: string,
+    img:string,
     commenti: string[],
     date: {}
 }
@@ -33,7 +36,8 @@ export interface User {
     password: string,
     name: string,
     surname: string,
-    id: number
+    id: number,
+    avatar:string
 }
 
 export interface Like {

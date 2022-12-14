@@ -4,15 +4,8 @@ import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { Auth } from './auth';
 
-export interface AuthData {
-  accessToken: string;
-  user: {
-    id: number;
-    email: string;
-    name: string;
-  };
-}
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +13,7 @@ export interface AuthData {
 export class AuthService {
   jwtHelper = new JwtHelperService();
   URL = 'http://localhost:4201';
-  private authSub = new BehaviorSubject<AuthData | null>(null);
+  private authSub = new BehaviorSubject<Auth | null>(null);
   user$ = this.authSub.asObservable();
   timeOut: any;
 
@@ -30,7 +23,7 @@ export class AuthService {
 
 
   login(data: { email: string; password: string }) {
-    return this.http.post<AuthData>(`${this.URL}/login`, data).pipe(
+    return this.http.post<Auth>(`${this.URL}/login`, data).pipe(
       tap((data) => {
         this.authSub.next(data);
         localStorage.setItem('user', JSON.stringify(data));
@@ -49,7 +42,7 @@ export class AuthService {
     return this.http.post(`${this.URL}/register`, data);
   }
 
-  autoLogout(data: AuthData) {
+  autoLogout(data: Auth) {
     const scadenza = this.jwtHelper.getTokenExpirationDate(data.accessToken) as Date;
     const intervallo = scadenza.getTime() - new Date().getTime();
     this.timeOut = setTimeout(() => {
@@ -62,7 +55,7 @@ export class AuthService {
     if (!user) {
       return;
     }
-    const userData: AuthData = JSON.parse(user);
+    const userData: Auth = JSON.parse(user);
     if (this.jwtHelper.isTokenExpired(userData.accessToken)) {
       return;
     }

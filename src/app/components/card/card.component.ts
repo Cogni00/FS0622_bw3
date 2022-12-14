@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs';
-import { AuthData } from 'src/app/auth/auth.service';
+import { Auth } from 'src/app/auth/auth';
 import { Post, PostGet, PostPut, User } from 'src/app/interface/post';
 import { PostService } from 'src/app/service/post.service';
 
@@ -17,6 +17,8 @@ export class CardComponent implements OnInit {
 
   name!: string
   surname!: string
+  avatar!:string
+  default_img = '/assets/icon/default.png'
 
   data!: string
 
@@ -33,7 +35,7 @@ export class CardComponent implements OnInit {
 
 
   @ViewChild('form') form!: NgForm
-  @ViewChild('user') user!: AuthData
+  @ViewChild('user') user!: Auth
 
   constructor(private postSrv: PostService, private r: Router) { }
 
@@ -96,7 +98,8 @@ export class CardComponent implements OnInit {
       let data = {
         newTitle: p.title,
         newDescription: p.description,
-        newEmoji: p.emoji
+        newEmoji: p.emoji,
+        newImg: p.img
       }
       this.form.setValue(data)
   }
@@ -106,6 +109,7 @@ export class CardComponent implements OnInit {
     let data: Post = {
       title: this.form.value.newTitle,
       description: this.form.value.newDescription,
+      img:  this.form.value.newImg,
       emoji: this.form.value.newEmoji,
       id: this.p.id,
       user_id: this.p.user_id,
@@ -126,6 +130,7 @@ export class CardComponent implements OnInit {
       title: p.title,
       description: p.description,
       emoji: p.emoji,
+      img:p.img,
       commenti: p.commenti,
       date: p.date,
       user_id: p.user_id
@@ -158,8 +163,15 @@ export class CardComponent implements OnInit {
       let user = res
       this.name = user.name
       this.surname = user.surname
+      if(this.avatar = user.avatar){
+        this.avatar = user.avatar
+      }else{
+        this.avatar = this.default_img
+      }
     })
   }
+
+  
 
   formaData() {
     var a = this.p.date.mese

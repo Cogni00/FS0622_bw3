@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Auth } from '../../auth';
 import { AuthService } from '../../auth.service';
 
 @Component({
@@ -9,6 +10,9 @@ import { AuthService } from '../../auth.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+
+
+  // user!:Auth[]
 
   constructor(private authSrv:AuthService, private router:Router) { }
 

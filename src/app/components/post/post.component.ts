@@ -29,6 +29,7 @@ export class PostComponent implements OnInit {
       user_id:this.user_id,
       title: form.value.title,
       description: form.value.description,
+      img:form.value.img,
       emoji: form.value.emoji,
       commenti: [],
       date: this.newDate
