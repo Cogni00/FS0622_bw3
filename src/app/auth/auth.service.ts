@@ -43,31 +43,31 @@ export class AuthService {
     this.authSub.next(null)
     localStorage.removeItem('user');
     this.router.navigate(['/login'])
-
   }
 
-  registration(data: { name:string, email: string, password: string }) {
+  registration(data: { name: string, surname: string, email: string, password: string }) {
     return this.http.post(`${this.URL}/register`, data);
   }
 
-  autoLogout(data:AuthData) {
+  autoLogout(data: AuthData) {
     const scadenza = this.jwtHelper.getTokenExpirationDate(data.accessToken) as Date;
-    const intervallo =  scadenza.getTime() - new Date().getTime();
-    this.timeOut = setTimeout(()=> {
+    const intervallo = scadenza.getTime() - new Date().getTime();
+    this.timeOut = setTimeout(() => {
       this.logout();
     }, intervallo)
   }
 
   ripristina() {
     const user = localStorage.getItem('user');
-    if (!user){
+    if (!user) {
       return;
     }
-    const userData:AuthData = JSON.parse(user);
-    if ( this.jwtHelper.isTokenExpired(userData.accessToken)){
+    const userData: AuthData = JSON.parse(user);
+    if (this.jwtHelper.isTokenExpired(userData.accessToken)) {
       return;
     }
     this.authSub.next(userData);
     this.autoLogout(userData);
   }
+
 }

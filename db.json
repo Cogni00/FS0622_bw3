@@ -1,25 +1,86 @@
 {
   "users": [
-
     {
       "email": "prova@hotmail.it",
-      "password": "$2a$10$2sblhqwoXvrM2tPjLyeCGeg3S8Pm0nfc2GlNs7twwFBI52Q22FaD6",
-      "name": "lorenzo",
+      "password": "$2a$10$VV9THof2iwUjFQdymXK08OpC87sG4.M054opU8fnQplh.x7nDGL8C",
+      "name": "Lorenzo",
+      "surname": "De Carolis",
       "id": 1
+    },
+    {
+      "email": "davide@david.it",
+      "password": "$2a$10$SNbPQMHskKBTSvcYnanahe6o57apbCVI2cPtBXV41KD7vM1Glf7Qm",
+      "name": "Davide",
+      "surname": "Alfonsi",
+      "id": 2
+    },
+    {
+      "email": "luca@david.it",
+      "password": "$2a$10$2mSkGEHe2fyt3wpspmjDnezboc91eUnJZwpmCWpQSuBX4MYEuzmd6",
+      "name": "Luca",
+      "surname": "Alfonsi",
+      "id": 3
+    },
+    {
+      "email": "ilaria.cognata@gmail.com",
+      "password": "$2a$10$mZOkhDjCQMEWiw1bGpaW1uqCjrP58vzLqNj5D0OlGJBOlCapPkzqq",
+      "name": "ilaria",
+      "surname": "cognata",
+      "id": 4
+      },
+      {
+      "email": "prova1@hotmail.it",
+      "password": "$2a$10$2jWZ2C7SVi7XcbNLxh1emevdTUg1y6YfZSqP27qDRUT85p4j2ratu",
+      "name": "Lorenzo",
+      "surname": "Altomonte",
+      "id": 3
+    }
+  ],
+  "post": [
+    {
+      "title": "piove",
+      "description": "cacca",
+      "emoji": "tag_faces",
+      "commenti": [
+        "o",
+        "cacca",
+        "cacchetta"
+      ],
+      "date": {
+        "mese": 11,
+        "giorno": 13,
+        "ora": 19,
+        "minuti": 39
+      },
+      "user_id": 3,
+      "id": 11
+    },
+    {
+      "user_id": 4,
+      "title": "piove",
+      "description": "caccone",
+      "emoji": "tag_faces",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 14,
+        "ora": 11,
+        "minuti": 9
+      },
+      "id": 12
+    }
+  ],
+  "favorites": [
+    {
+      "postId": 8,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "postId": 8,
+      "userId": 2,
+      "id": 2
+
     }
   ]
 }
-
-
-  ],
-
-  "post": [
-
-  ],
-
-  "favorites": [
-
-  ]
-}
-
-

@@ -1,35 +1,50 @@
+// GENERALI
 import { AuthModule } from './auth/auth.module';
-import { HomeComponent } from './home/home.component';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { TokenInterceptor } from './auth/token.interceptor';
+
+// COMPONENT
+import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
 import { PostComponent } from './components/post/post.component';
 import { CardComponent } from './components/card/card.component';
+
+// MATERIAL
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSelectModule } from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import {
   ErrorStateMatcher,
   ShowOnDirtyErrorStateMatcher,
 } from '@angular/material/core';
-import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatCardModule } from '@angular/material/card';
-import { FormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { TokenInterceptor } from './auth/token.interceptor';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PostComponent,
-    CardComponent
+    CardComponent,
+    DashboardComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -44,7 +59,22 @@ import { TokenInterceptor } from './auth/token.interceptor';
     HttpClientModule,
     AuthModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSelectModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatChipsModule,
+    MatExpansionModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatListModule,
+    MatDialogModule
+
   ],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
@@ -56,4 +86,4 @@ import { TokenInterceptor } from './auth/token.interceptor';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
