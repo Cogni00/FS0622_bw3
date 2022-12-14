@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError } from 'rxjs';
-import { CommentPost, Like, Post, PostGet, User } from '../interface/post';
+import { CommentPost, Like, Post, PostGet, PostPut, User } from '../interface/post';
 
 @Injectable({
 
@@ -33,6 +33,18 @@ export class PostService {
       console.log(err);
       throw err
     }))
+  }
+
+
+  modificaPost(data: PostGet, id: number) {
+    return this.http.put<PostGet>(this.urlPath + `/${id}`, data).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    }))
+  }
+
+  eliminaPost(id:number){
+    return this.http.delete(this.urlPath + `/${id}`)
   }
 
   getName(id: number) {

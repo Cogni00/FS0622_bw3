@@ -21,6 +21,7 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   sendPost(form: NgForm) {
     this.getDate()
     this.getUserId()

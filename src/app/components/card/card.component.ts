@@ -1,7 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { catchError } from 'rxjs';
-import { Post, PostGet } from 'src/app/interface/post';
+import { AuthData } from 'src/app/auth/auth.service';
+import { Post, PostGet, PostPut, User } from 'src/app/interface/post';
 import { PostService } from 'src/app/service/post.service';
 
 @Component({
@@ -21,9 +23,19 @@ export class CardComponent implements OnInit {
   isFav: boolean = false
   preferiti: any
 
+
+  newTitle: string = ''
+  newDescription: string = ''
+  newEmoji: string = ''
+
   count: number = 0
 
-  constructor(private postSrv: PostService) { }
+
+
+  @ViewChild('form') form!: NgForm
+  @ViewChild('user') user!: AuthData
+
+  constructor(private postSrv: PostService, private r: Router) { }
 
   ngOnInit(): void {
     this.getFavorites()
@@ -71,6 +83,40 @@ export class CardComponent implements OnInit {
     this.count--
   }
 
+
+  elimina(id:number){
+    this.postSrv.eliminaPost(id).subscribe(res=>{
+      res
+    })
+    window.location.reload()
+  }
+
+
+  visualizzaDati(p: Post) {
+      let data = {
+        newTitle: p.title,
+        newDescription: p.description,
+        newEmoji: p.emoji
+      }
+      this.form.setValue(data)
+  }
+
+
+  modifica(f: NgForm) {
+    let data: Post = {
+      title: this.form.value.newTitle,
+      description: this.form.value.newDescription,
+      emoji: this.form.value.newEmoji,
+      id: this.p.id,
+      user_id: this.p.user_id,
+      commenti: this.p.commenti,
+      date: this.p.date
+    }
+    this.postSrv.modificaPost(data, this.p.id).subscribe((res => {
+      res
+    }))
+    window.location.reload()
+  }
 
 
 
