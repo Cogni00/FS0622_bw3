@@ -13,6 +13,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/post/post.component';
 import { CardComponent } from './components/card/card.component';
+import { TrisComponent } from './components/tris/tris.component';
+import { SquareComponent } from './components/tris/square/square.component';
 
 // MATERIAL
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -26,7 +28,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
-import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 import {
@@ -36,6 +38,7 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -45,6 +48,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     PostComponent,
     CardComponent,
     DashboardComponent,
+    ProfileComponent,
+    TrisComponent,
+    SquareComponent
 
   ],
   imports: [
@@ -74,8 +80,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatToolbarModule,
     MatMenuModule,
     MatListModule,
-    MatDialogModule
-
   ],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },

@@ -14,7 +14,10 @@ export class HomeComponent implements OnInit {
 
   posts: Post[] = []
   name!: string
+  avatar!:string
+  default_img = '/assets/icon/default.png'
 
+  
   constructor(private postSrv: PostService, private authSrv: AuthService) { }
 
 
@@ -27,6 +30,11 @@ export class HomeComponent implements OnInit {
     let x: any = localStorage.getItem('user')
     let y = JSON.parse(x)
     this.name = y.user.name
+    if(this.avatar = y.user.avatar){
+      this.avatar = y.user.avatar
+    }else{
+      this.avatar = this.default_img
+    }
   }
 
   logout() {

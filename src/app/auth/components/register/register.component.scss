@@ -1,4 +1,4 @@
-.container{
+.container {
   position: absolute;
   top: 0;
   left: 0;
@@ -11,12 +11,14 @@
 	background-size: 400% 400%;
 	animation: gradient 8s ease infinite;
 }
-.card{
+
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 350px;
 }
+
 .example-form {
   min-width: 150px;
   max-width: 500px;
@@ -26,15 +28,39 @@
 .example-full-width {
   width: 100%;
 }
-.mb{
+
+.mb {
   margin-bottom: 20px;
 }
-.ul{
+
+.ul {
   text-decoration: underline;
   cursor: pointer;
 }
-.center{
+
+.center {
   display: flex;
   justify-content: center;
 }
+
+
+
+mat-option{
+  height: 80px;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  img{
+    margin-top: 20px;
+    width: 50px;
+  }
+}
+
+mat-card-footer {
+  h2 {
+    color: red;
+  }
+}
+
 

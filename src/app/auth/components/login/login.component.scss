@@ -1,11 +1,28 @@
 
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #171717;
+}
+
+
+
+
 .card{
+
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 350px;
 
 }
+
 .example-form {
   min-width: 150px;
   max-width: 500px;
@@ -15,17 +32,25 @@
 .example-full-width {
   width: 100%;
 }
-.mb{
+
+.mb {
   margin-bottom: 20px;
 }
-.ul{
+
+.ul {
   text-decoration: underline;
   cursor: pointer;
 }
-.center{
+
+.center {
   display: flex;
   justify-content: center;
 }
+
+mat-card-footer {
+  h2 {
+    color: red;
+  }
 
 
 /*...............................................login*/
@@ -127,5 +152,6 @@ mat-drawer-content{
   .mat-drawer-content{
     margin-left: 0!important;
   }
+
 
 }
