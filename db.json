@@ -42,6 +42,22 @@
       "surname": "luca",
       "avatar": "/assets/icon/1.png",
       "id": 5
+    },
+    {
+      "email": "paolo@bitta.com",
+      "password": "$2a$10$sSuLFdFJkHif7rJ1fRQUhOWfFGBU0Ot2qhJU88zPXJs2BNlRIBFtm",
+      "name": "paolo",
+      "surname": "bitta",
+      "avatar": "/assets/icon/6.png",
+      "id": 6
+    },
+    {
+      "email": "gino@paoli.com",
+      "password": "$2a$10$c1rf43PaLj5qPv/7I4/Qw.ApKGDg2Co/rIPTd0NMbdJDHpXtgRfgS",
+      "name": "gino",
+      "surname": "paoli",
+      "avatar": "/assets/icon/4.png",
+      "id": 7
     }
   ],
   "post": [
@@ -74,6 +90,36 @@
         "minuti": 4
       },
       "id": 2
+    },
+    {
+      "user_id": 4,
+      "title": "we23e",
+      "description": "qeqewq",
+      "img": "/assets/images/2.jpg",
+      "emoji": "Triste",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 15,
+        "ora": 18,
+        "minuti": 1
+      },
+      "id": 3
+    },
+    {
+      "user_id": 6,
+      "title": "dadad",
+      "description": "adsa",
+      "img": "/assets/images/3.jpg",
+      "emoji": "Triste",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 15,
+        "ora": 18,
+        "minuti": 33
+      },
+      "id": 4
     }
   ],
   "favorites": [
