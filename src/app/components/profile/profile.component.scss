@@ -1,0 +1,26 @@
+.padre {
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .example-card {
+    width: 70%;
+    margin: 10px auto 50px;
+    border: 1px solid lightgrey;
+  }
+
+  .nome {
+    margin:20px;
+    font-size: 25px;
+  }
+
+  .foto {
+    height: 280px;
+    width:  200px;
+    background-color: red;
+    position: absolute;
+    right: 50px;
+
+
+  }
