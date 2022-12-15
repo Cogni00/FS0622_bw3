@@ -1,14 +1,12 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
     <mat-list role="list">
-      <mat-list-item role="listitem"><mat-icon>home</mat-icon> <a [routerLink]="['']" routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}">Home</a></mat-list-item>
-      <mat-list-item role="listitem"><mat-icon>account_circle</mat-icon>Il tuo profilo</mat-list-item>
+      <mat-list-item role="listitem"><mat-icon>home</mat-icon> <a [routerLink]="['']">Home</a></mat-list-item>
+      <mat-list-item role="listitem"><mat-icon>account_circle</mat-icon><a [routerLink]="['profile']">Il tuo profilo</a></mat-list-item>
       <hr>
       <h3>GAMES</h3>
       <mat-list-item role="listitem"><mat-icon>videogame_asset</mat-icon> <a [routerLink]="['/tris']"
           routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Tris</a></mat-list-item>
-
       <mat-list-item role="listitem"> <button id="logout" mat-flat-button
           (click)="logout()"><mat-icon>exit_to_app</mat-icon>
           Logout</button></mat-list-item>
@@ -24,6 +22,7 @@
         </mat-chip>
       </mat-chip-list>
     </div>
+
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

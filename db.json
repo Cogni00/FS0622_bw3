@@ -29,11 +29,11 @@
       "id": 4
     },
     {
-      "email": "prova1@hotmail.it",
-      "password": "$2a$10$2jWZ2C7SVi7XcbNLxh1emevdTUg1y6YfZSqP27qDRUT85p4j2ratu",
-      "name": "Lorenzo",
-      "surname": "Altomonte",
-      "id": 3
+      "email": "pippo@franco.com",
+      "password": "$2a$10$QXb2HlmY/aXPxo1s5zzvJurzOA7lQEY6awol9cWWQ3iu6vsUzne3m",
+      "name": "Pippo",
+      "surname": "Franco",
+      "id": 5
     }
   ],
   "post": [

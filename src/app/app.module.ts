@@ -29,6 +29,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
 
+
 import {
   ErrorStateMatcher,
   ShowOnDirtyErrorStateMatcher,
@@ -36,6 +37,7 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -45,6 +47,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     PostComponent,
     CardComponent,
     DashboardComponent,
+    ProfileComponent,
     TrisComponent,
     SquareComponent
 
@@ -76,7 +79,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatToolbarModule,
     MatMenuModule,
     MatListModule,
-
   ],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
