@@ -1,8 +1,20 @@
-<div class="container">
-  <mat-card class="card">
-    <mat-card-title class="mb">Login</mat-card-title>
-    <mat-card-content>
-      <form class="example-form" #form="ngForm" (ngSubmit)="onsubmit(form)">
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <div class="logo">
+      <div class="title">
+        <h1>fakebook</h1>
+        <div class="desc">
+          <p>
+            Vuoi conoscere nuove persone?
+            <br>
+            Restare in contatto con i tuoi amici lontani?
+            <br>
+            Entra a far parte della nostra community!
+          </p>
+        </div>
+      </div>
+    </div>
+  </mat-drawer>
 
         <mat-form-field class="example-full-width" appearance="fill" color="accent">
           <mat-label>Email</mat-label>
@@ -26,5 +38,15 @@
       <h2 *ngIf=" err">{{err}}</h2>
     </mat-card-footer>
   </mat-card>
-
-</div>
+          <mat-card-actions>
+            <div class="center"><button mat-raised-button color="primary" [disabled]="form.invalid"
+                type="submit">Accedi</button></div>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>
+      <mat-card-footer>
+        <p>Non sei Registrato? <span class="ul" [routerLink]="'/register'">Registrati!</span></p>
+      </mat-card-footer>
+    </mat-card>
+  </mat-drawer-content>
+</mat-drawer-container>
