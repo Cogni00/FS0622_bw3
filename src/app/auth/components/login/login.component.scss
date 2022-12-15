@@ -8,7 +8,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #171717;
+  background: linear-gradient(-45deg,#29662c, #4cc950,  #a5d6a7);
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
 }
 
 
@@ -51,15 +53,14 @@ mat-card-footer {
   h2 {
     color: red;
   }
+}
 
 
 /*...............................................login*/
 .example-container {
   width: 100%;
   margin: 0;
-  background: linear-gradient(-45deg,#29662c, #4cc950,  #a5d6a7);
-	background-size: 400% 400%;
-	animation: gradient 8s ease infinite;
+
 	height: 100vh;
 }
 

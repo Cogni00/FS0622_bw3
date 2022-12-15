@@ -42,6 +42,14 @@
       "surname": "luca",
       "avatar": "/assets/icon/1.png",
       "id": 5
+    },
+    {
+      "email": "giulia@giulia.com",
+      "password": "$2a$10$m/5am8n33gweIavU36QGjeScVgoszjrm7i63x9SDgSMRT/TfwMINW",
+      "name": "Giulia",
+      "surname": "Franzosi",
+      "avatar": "/assets/icon/7.png",
+      "id": 6
     }
   ],
   "post": [
