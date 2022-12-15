@@ -5,20 +5,32 @@ import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/post/post.component';
 import { AuthGuard } from './auth/auth.guard';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { TrisComponent } from './components/tris/tris.component';
+import { SquareComponent } from './components/tris/square/square.component';
+
 
 const routes: Routes = [
   {
-    path:"",
-    component:HomeComponent,
-    canActivate:[AuthGuard],
+    path: "",
+    component: HomeComponent,
+    canActivate: [AuthGuard],
     children: [
       {
-        path:"",
+        path: "",
         component: DashboardComponent
       },
       {
-        path:"post",
+        path: "post",
         component: PostComponent
+      },
+      {
+        path:"profile",
+        component: ProfileComponent
+      },
+      {
+        path: "tris",
+        component: TrisComponent
       }
     ]
   }
