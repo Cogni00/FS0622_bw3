@@ -18,8 +18,16 @@ export class CardComponent implements OnInit {
 
   name!: string
   surname!: string
+
   avatar!:string
   default_img = '/assets/icon/default.png'
+
+  id!: number
+
+  loggedName!: string
+  loggedSurname!: string
+  loggedId!: number
+
 
   data!: string
 
@@ -45,8 +53,17 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
     this.getFavorites()
     this.getPostFav()
+    this.getLoggedName()
     this.getName()
     this.formaData()
+  }
+
+  getLoggedName() {
+    let a: any = localStorage.getItem('user')
+    let b = JSON.parse(a)
+    this.loggedName = b.user.name
+    this.loggedSurname = b.user.surname
+    this.loggedId = b.user.id
   }
 
   getPostFav() {
@@ -72,11 +89,12 @@ export class CardComponent implements OnInit {
 
 
   like(id: number) {
-    this.getFavorites()
-    this.getPostFav()
+
     this.postSrv.aggiungiLike(id).subscribe(res => {
       console.log(res);
       this.isFav = true
+      this.getFavorites()
+      this.getPostFav()
     })
   }
 
@@ -89,8 +107,8 @@ export class CardComponent implements OnInit {
   }
 
 
-  elimina(id:number){
-    this.postSrv.eliminaPost(id).subscribe(res=>{
+  elimina(id: number) {
+    this.postSrv.eliminaPost(id).subscribe(res => {
       res
     })
     window.location.reload()
@@ -98,6 +116,7 @@ export class CardComponent implements OnInit {
 
 
   visualizzaDati(p: Post) {
+
       let data = {
         newTitle: p.title,
         newDescription: p.description,
@@ -105,6 +124,7 @@ export class CardComponent implements OnInit {
         newImg: p.img
       }
       this.form.setValue(data)
+
   }
 
 
@@ -125,9 +145,6 @@ export class CardComponent implements OnInit {
     window.location.reload()
   }
 
-
-
-
   sendComment(form: NgForm, p: Post) {
     let data: PostGet = {
       title: p.title,
@@ -141,7 +158,12 @@ export class CardComponent implements OnInit {
     let y = form.value.comment
 
     if (y) {
-      let x = data.commenti.push(y)
+      let newComment = {
+        comment: y,
+        userName: this.loggedName,
+        userSurname: this.loggedSurname
+      }
+      let x = data.commenti.push(newComment)
       this.postSrv.postComment(data, p.id).subscribe((res => {
         console.log(res);
         res
@@ -156,6 +178,7 @@ export class CardComponent implements OnInit {
     form.reset()
   }
 
+
   openMore(id: number) {
     let more = document.getElementById('moreOption' + id)
     more!.classList.toggle('toggle');
@@ -166,11 +189,15 @@ export class CardComponent implements OnInit {
       let user = res
       this.name = user.name
       this.surname = user.surname
+      
       if(this.avatar = user.avatar){
         this.avatar = user.avatar
       }else{
         this.avatar = this.default_img
       }
+      
+      this.id = user.id
+
     })
   }
 

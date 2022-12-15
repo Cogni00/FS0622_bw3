@@ -1,5 +1,10 @@
 .container {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 mat-card-header {
@@ -51,7 +56,7 @@ mat-card-header {
   border-left: none;
   border-radius: 5px 5px 20px 20px;
   animation: open 0.5s ease-in-out;
-  z-index: -10;
+  z-index: 1;
   display: flex;
   flex-direction: column;
 
@@ -79,14 +84,16 @@ mat-card-content {
   height: auto;
   width: 100%;
 
+
   img{
     width: 350px;
     margin-left: 20px;
+
   }
 
   p {
     width: 80%;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
   }
 
   .emoji {

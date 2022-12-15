@@ -5,7 +5,7 @@ export interface Post {
     description: string,
     img:string,
     emoji: string,
-    commenti: [],
+    commenti: object[],
     date: {}
 }
 export interface PostGet {
@@ -14,20 +14,20 @@ export interface PostGet {
     description: string,
     emoji: string,
     img:string,
-    commenti: string[],
+    commenti: object[],
     date: {}
 }
 
 export interface CommentPost {
-    comment: string
+    comment: {}
 }
 
-export interface PostPut{
-    id:number,
+export interface PostPut {
+    id: number,
     description: string,
     emoji: string,
     img:string,
-    commenti: string[],
+    commenti: object[],
     date: {}
 }
 

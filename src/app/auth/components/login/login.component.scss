@@ -1,4 +1,4 @@
-.container{
+.container {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,12 +9,14 @@
   align-items: center;
   background-color: #171717;
 }
-.card{
+
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 250px;
 }
+
 .example-form {
   min-width: 150px;
   max-width: 500px;
@@ -24,14 +26,23 @@
 .example-full-width {
   width: 100%;
 }
-.mb{
+
+.mb {
   margin-bottom: 20px;
 }
-.ul{
+
+.ul {
   text-decoration: underline;
   cursor: pointer;
 }
-.center{
+
+.center {
   display: flex;
   justify-content: center;
+}
+
+mat-card-footer {
+  h2 {
+    color: red;
+  }
 }

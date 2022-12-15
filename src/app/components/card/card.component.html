@@ -110,30 +110,36 @@
   <img src="{{avatar}}" class="avatar-circle" alt="">
   <mat-card-title>{{name}} {{surname}}</mat-card-title>
   <mat-card-subtitle>{{data}} <mat-icon> place</mat-icon> </mat-card-subtitle>
-  <button class="more" mat-raised-button (click)="openMore(p.id)">
-    <mat-icon color="primary">control_point</mat-icon>
-  </button>
+  <span *ngIf="id == loggedId">
+    <button class="more" mat-raised-button (click)="openMore(p.id)">
+      <mat-icon color="primary">control_point</mat-icon>
+    </button>
+  </span>
 </mat-card-header>
 
 <mat-card-content id="moreOption{{p.id}}" class="moreOption toggle">
-  <a (click)="visualizzaDati(p)"><mat-icon> border_color</mat-icon></a>
-  <a (click)="elimina(p.id)"><mat-icon> delete</mat-icon></a>
+  <button (click)="visualizzaDati(p)"><mat-icon> border_color</mat-icon></button>
+  <button (click)="elimina(p.id)"><mat-icon> delete</mat-icon></button>
 </mat-card-content>
 
 <mat-card-content>
+
   <img src="{{p.img}}" alt="">
+
   <p>{{p.description}}</p>
   <span class="emoji">{{p.emoji}}</span>
 </mat-card-content>
 
 <mat-card-actions>
   <button mat-button (click)=" isFav ? rimuoviLike() : like(p.id)"
-    [color]=" isFav ? 'primary':''"><mat-icon>thumb_up</mat-icon>Mi piace {{count}}</button>
+
+    [color]=" isFav ? 'primary':''"><mat-icon>thumb_up</mat-icon> Mi piace {{count}}</button>
+
   <button mat-button> <mat-icon> chat_bubble_outline</mat-icon> Commenta </button>
 </mat-card-actions>
 
 <mat-card-content class="commenti" *ngFor="let c of p.commenti">
-  <p><span>{{name}}</span>{{c}}</p>
+  <p><span>{{c.userName}} {{c.userSurname}}</span>{{c.comment}} </p>
 </mat-card-content>
 
 <mat-card-footer id="footer{{p.id}}" class="display">
