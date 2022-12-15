@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { catchError } from 'rxjs';
 import { PostGet } from 'src/app/interface/post';
 import { PostService } from 'src/app/service/post.service';
+
 
 
 @Component({
@@ -14,11 +15,22 @@ export class PostComponent implements OnInit {
 
   newDate!: {}
   user_id!:number
+ 
+  DialogAnimationsExampleDialog:any
+  default_img = '/assets/icon/default.png'
+
+
 
   constructor(private postSrv: PostService) { }
 
 
   ngOnInit(): void {
+    
+  }
+
+
+  visualizzaForm(){
+    
   }
 
 

@@ -1,5 +1,19 @@
 <div class="container">
-  <form class="example-form" #form="ngForm" (ngSubmit)="sendPost(form)">
+  <form class="example-form">
+    <mat-form-field class="example-full-width-1">
+      <mat-label class="mat-label"> A cosa stai pensando oggi ?</mat-label>
+      <input matInput type="text" required name="description" #description="ngModel" ngModel id="description"
+        (click)="visualizzaForm()">
+    </mat-form-field>
+    <div class="icon">
+      <p><mat-icon> insert_emoticon</mat-icon>Stato d'animo/attività</p>
+      <p><mat-icon>perm_media</mat-icon>Foto/video</p>
+    </div>
+  </form>
+</div>
+
+<div class="container-2 none">
+  <form class="example-form-2" #form="ngForm" (ngSubmit)="sendPost(form)">
     <mat-form-field class="example-full-width">
       <mat-label>Titolo</mat-label>
       <input matInput type="text" required name="title" #title="ngModel" ngModel id="title">
@@ -10,21 +24,20 @@
         Title is <strong>required</strong>
       </mat-error>
     </mat-form-field>
+
+
+
     <mat-form-field class="example-full-width">
-      <mat-label>A cosa stai pensando oggi?...</mat-label>
-      <input matInput type="text" required name="description" #description="ngModel" ngModel id="description">
-      <mat-error *ngIf="description.touched && description.invalid" ngModule>
-        Please enter a valid description address
-      </mat-error>
-      <mat-error *ngIf="description.touched && description.invalid">
-        Description is <strong>required</strong>
-      </mat-error>
+      <mat-label class="mat-label"> A cosa stai pensando oggi ?</mat-label>
+      <input matInput type="text" required name="description" #description="ngModel" ngModel id="description"
+        (click)="visualizzaForm()">
     </mat-form-field>
+
 
     <mat-form-field appearance="fill" class="example-full-width">
       <mat-label>
         Decidi quale immagine utilizzare per il tuo post
-        <img src="{{img.value}}" style="width: 50px;" alt="">
+        <img src="{{img.value}}" style="height: 50px; margin-left: 50px;" alt="">
       </mat-label>
       <mat-select matSelect required name="img" #img="ngModel" ngModel id="img">
         <mat-option></mat-option>
@@ -60,16 +73,16 @@
         </mat-option>
       </mat-select>
 
-      <mat-error *ngIf="emoji.touched && emoji.invalid" ngModule>
-        Please enter a valid emoji address
+      <mat-error *ngIf="img.touched && img.invalid" ngModule>
+        Please enter a valid img address
       </mat-error>
-      <mat-error *ngIf="emoji.touched && emoji.invalid">
-        Emoji is <strong>required</strong>
+      <mat-error *ngIf="img.touched && img.invalid">
+        img is <strong>required</strong>
       </mat-error>
     </mat-form-field>
 
 
-    <mat-form-field appearance="fill" class="example-full-width">
+    <mat-form-field appearance="fill" class="example-full-width ">
       <mat-label>
         <mat-icon> sentiment_satisfied_alt</mat-icon>
         Come ti senti oggi?
@@ -100,6 +113,10 @@
         Emoji is <strong>required</strong>
       </mat-error>
     </mat-form-field>
-    <button type="submit" mat-raised-button color="primary">Pubblica</button>
+
+    <button type="submit" mat-raised-button color="primary" class="">Pubblica</button>
+
   </form>
 </div>
+
+ 

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs';
 import { Auth } from 'src/app/auth/auth';
@@ -36,6 +37,8 @@ export class CardComponent implements OnInit {
 
   @ViewChild('form') form!: NgForm
   @ViewChild('user') user!: Auth
+ 
+
 
   constructor(private postSrv: PostService, private r: Router) { }
 

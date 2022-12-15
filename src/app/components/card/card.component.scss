@@ -74,14 +74,15 @@ mat-card-header {
   display: none;
 }
 
-
-
-
-
 mat-card-content {
   position: relative;
   height: auto;
   width: 100%;
+
+  img{
+    width: 350px;
+    margin-left: 20px;
+  }
 
   p {
     width: 80%;
