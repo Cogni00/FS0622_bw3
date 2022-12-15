@@ -10,7 +10,72 @@
 
         <mat-form-field class="example-full-width" appearance="fill" color="accent">
           <mat-label>Cognome</mat-label>
-          <input matInput placeholder="Cognome" type="text" #surname="ngModel" ngModel name="surname" required />
+          <input matInput placeholder="Cognome" type="text" #surname="ngModel" ngModel name="surname" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Select</mat-label>
+          <img src="{{avatar.value}}" style="width: 50px;" alt="">
+          <mat-select matSelect required name="avatar" #avatar="ngModel" ngModel id="avatar">
+            <mat-option value="">---</mat-option>
+            <mat-option value="/assets/icon/1.png">
+              <img src="/assets/icon/1.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/2.png">
+              <img src="/assets/icon/2.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/3.png">
+              <img src="/assets/icon/3.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/4.png">
+              <img src="/assets/icon/4.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/5.png">
+              <img src="/assets/icon/5.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/6.png">
+              <img src="/assets/icon/6.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/7.png">
+              <img src="/assets/icon/7.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/8.png">
+              <img src="/assets/icon/8.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/9.png">
+              <img src="/assets/icon/9.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/10.png">
+              <img src="/assets/icon/10.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/11.png">
+              <img src="/assets/icon/11.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/12.png">
+              <img src="/assets/icon/12.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/13.png">
+              <img src="/assets/icon/13.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/14.png">
+              <img src="/assets/icon/14.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/15.png">
+              <img src="/assets/icon/15.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/16.png">
+              <img src="/assets/icon/16.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/17.png">
+              <img src="/assets/icon/17.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/18.png">
+              <img src="/assets/icon/18.png" alt="">
+            </mat-option>
+            <mat-option value="/assets/icon/19.png">
+              <img src="/assets/icon/19.png" alt="">
+            </mat-option>
+          </mat-select>
         </mat-form-field>
 
         <mat-form-field class="example-full-width" appearance="fill" color="accent" type="text">
@@ -36,6 +101,8 @@
         Sei già registrato?
         <span class="ul" [routerLink]="'/login'">Accedi!</span>
       </p>
+
+      <h2 *ngIf="err" class="text-danger mt-3">{{err}}</h2>
     </mat-card-footer>
   </mat-card>
 </div>
