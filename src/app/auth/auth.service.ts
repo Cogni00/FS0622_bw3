@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 export interface AuthData {
   accessToken: string;
@@ -30,13 +30,14 @@ export class AuthService {
 
 
   login(data: { email: string; password: string }) {
-    return this.http.post<AuthData>(`${this.URL}/login`, data).pipe(
-      tap((data) => {
-        this.authSub.next(data);
-        localStorage.setItem('user', JSON.stringify(data));
-        this.autoLogout(data);
+    return this.http.post<AuthData>(`${this.URL}/login`, data).pipe(catchError(err => {
+      throw err
+    }), tap((data) => {
+      this.authSub.next(data);
+      localStorage.setItem('user', JSON.stringify(data));
+      this.autoLogout(data);
 
-      })
+    })
     );
   }
   logout() {
@@ -46,7 +47,10 @@ export class AuthService {
   }
 
   registration(data: { name: string, surname: string, email: string, password: string }) {
-    return this.http.post(`${this.URL}/register`, data);
+    return this.http.post(`${this.URL}/register`, data).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    }));
   }
 
   autoLogout(data: AuthData) {
