@@ -24,6 +24,54 @@
 
     <mat-form-field appearance="fill" class="example-full-width">
       <mat-label>
+        Vuoi modificare l'immagine per il tuo posto?
+        <img src="{{newImg.value}}" alt="">
+      </mat-label>
+      <mat-select matSelect required name="newImg" #newImg="ngModel" ngModel id="newImg">
+        <mat-option></mat-option>
+        <mat-option value="/assets/images/1.jpg">
+          <img src="/assets/images/1.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/2.jpg">
+          <img src="/assets/images/2.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/3.jpg">
+          <img src="/assets/images/3.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/4.jpg">
+          <img src="/assets/images/4.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/5.jpg">
+          <img src="/assets/images/5.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/6.jpg">
+          <img src="/assets/images/6.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/7.jpg">
+          <img src="/assets/images/7.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/8.jpg">
+          <img src="/assets/images/8.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/9.jpg">
+          <img src="/assets/images/9.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/10.jpg">
+          <img src="/assets/images/10.jpg" alt="">
+        </mat-option>
+      </mat-select>
+
+      <mat-error *ngIf="newEmoji.touched && newEmoji.invalid" ngModule>
+        Please enter a valid emoji address
+      </mat-error>
+      <mat-error *ngIf="newEmoji.touched && newEmoji.invalid">
+        Emoji is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" class="example-full-width">
+      <mat-label>
         <mat-icon> sentiment_satisfied_alt</mat-icon>
         Come ti senti oggi?
       </mat-label>
@@ -59,7 +107,7 @@
 
 
 <mat-card-header>
-  <img src="https://picsum.photos/100/200" class="avatar-circle" alt="">
+  <img src="{{avatar}}" class="avatar-circle" alt="">
   <mat-card-title>{{name}} {{surname}}</mat-card-title>
   <mat-card-subtitle>{{data}} <mat-icon> place</mat-icon> </mat-card-subtitle>
   <span *ngIf="id == loggedId">
@@ -75,14 +123,18 @@
 </mat-card-content>
 
 <mat-card-content>
-  <h3>{{p.title}}</h3>
+
+  <img src="{{p.img}}" alt="">
+
   <p>{{p.description}}</p>
   <span class="emoji">{{p.emoji}}</span>
 </mat-card-content>
 
 <mat-card-actions>
   <button mat-button (click)=" isFav ? rimuoviLike() : like(p.id)"
+
     [color]=" isFav ? 'primary':''"><mat-icon>thumb_up</mat-icon> Mi piace {{count}}</button>
+
   <button mat-button> <mat-icon> chat_bubble_outline</mat-icon> Commenta </button>
 </mat-card-actions>
 

@@ -41,8 +41,22 @@
   justify-content: center;
 }
 
+
+mat-option{
+  height: 80px;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  img{
+    margin-top: 20px;
+    width: 50px;
+  }
+}
+
 mat-card-footer {
   h2 {
     color: red;
   }
 }
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Auth } from '../../auth';
 import { catchError } from 'rxjs';
 import { AuthService } from '../../auth.service';
 
@@ -12,7 +13,11 @@ import { AuthService } from '../../auth.service';
 export class RegisterComponent implements OnInit {
   err: string | undefined
 
-  constructor(private authSrv: AuthService, private router: Router) { }
+
+
+  // user!:Auth[]
+
+  constructor(private authSrv:AuthService, private router:Router) { }
 
   ngOnInit(): void {
   }
