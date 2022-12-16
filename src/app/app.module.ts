@@ -34,6 +34,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 
+
 import {
   ErrorStateMatcher,
   ShowOnDirtyErrorStateMatcher,
@@ -93,8 +94,7 @@ import { RestartDialogComponent } from './components/memory/restart-dialog/resta
     MatToolbarModule,
     MatMenuModule,
     MatListModule,
-    MatDialogModule,
-    MatBadgeModule
+    MatDialogModule
   ],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },

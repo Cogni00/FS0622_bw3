@@ -7,9 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(-45deg, #29662c, #4cc950, #a5d6a7);
-  background-size: 400% 400%;
-  animation: gradient 8s ease infinite;
 }
 
 .card {
@@ -51,12 +48,16 @@ mat-card-footer {
   }
 }
 
+
 /*...............................................login*/
 .example-container {
   width: 100%;
   margin: 0;
+	height: 100vh;
+  background: linear-gradient(-45deg,#29662c, #4cc950,  #a5d6a7);
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
 
-  height: 100vh;
 }
 
 @keyframes gradient {
@@ -120,23 +121,8 @@ h1 {
 
 @media screen and (max-width: 920px) {
 
-  /*.example-container{
-    display: flex;
-    flex-direction: column;
-  }
-  .title{
-    display: flex;
-    flex-direction: column;
-  }
-  .desc{
-    display: flex;
-    flex-direction: column;
-  }
-  .card{
-    display: flex;
-    flex-direction: column;
-  }*/
-  .example-container {
+
+  .example-container{
     display: flex;
     flex-direction: column;
   }
@@ -147,9 +133,11 @@ h1 {
     height: 50%;
   }
 
-  .mat-drawer-content {
-    margin-left: 0 !important;
-  }
 
+  ::ng-deep .mat-drawer-content{
+    margin-left: 0!important;
+
+
+  }
 
 }

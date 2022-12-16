@@ -81,6 +81,25 @@ mat-icon {
   font-size: 25px;
 }
 
+mat-list{
+  margin-top: 15px;
+}
+i{
+  margin-right: 25px;
+  font-size: 40px;
+  font-style: normal;
+}
+
+#fb{
+  padding-top: 15px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#games{
+  font-weight:500;
+  padding-top: 15px;
+}
 .saluta {
   display: flex;
   justify-content: end;
@@ -274,6 +293,10 @@ p {
 
 
 @media screen and (max-width:768px) {
+  #fb{
+    display: none;
+
+  }
   h3 {
     text-align: left;
     font-size: 12px;
@@ -312,4 +335,4 @@ p {
   }
 }
 
-@media screen and (max-width:400px) {}
+
