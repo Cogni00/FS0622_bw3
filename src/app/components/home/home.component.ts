@@ -20,16 +20,14 @@ export class HomeComponent implements OnInit {
   default_img = '/assets/icon/default.png'
 
   
-  constructor(private postSrv: PostService, private authSrv: AuthService , private dialogRef:MatDialog) { }
+  constructor(private postSrv: PostService, private authSrv: AuthService) { }
 
 
   ngOnInit(): void {
     this.getName()
   }
 
-  openDialog(){
-    this.dialogRef.open(PostComponent)
-  }
+  
 
   getName() {
     let x: any = localStorage.getItem('user')

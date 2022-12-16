@@ -1,0 +1,87 @@
+<div id="modifyForm">
+  <div class="container">
+    <div id="actions">
+      <h2>Modifica Post</h2>
+    </div>
+    <form class="example-form" [formGroup]="heroForm" (ngSubmit)="submit()">
+
+      <mat-form-field class="example-full-width form-group">
+        <mat-label>Titolo</mat-label>
+        <input matInput type="text" required name="newTitle" formControlName="newTitle" id="newTitle">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width form-group">
+        <mat-label>A cosa stai pensando oggi?...</mat-label>
+        <input matInput type="text" required name="newDescription" formControlName="newDescription" id="newDescription">
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill" class="example-full-width form-group">
+        <mat-label>
+          Vuoi modificare l'immagine per il tuo post?
+        </mat-label>
+        <mat-select matSelect required name="newImg" formControlName="newImg" id="newImg">
+          <mat-option></mat-option>
+          <mat-option value="/assets/images/1.jpg">
+            <img src="/assets/images/1.jpg" alt="">
+          </mat-option>
+          <mat-option value="/assets/images/2.jpg">
+            <img src="/assets/images/2.jpg" alt="">
+          </mat-option>
+          <mat-option value="/assets/images/3.jpg">
+            <img src="/assets/images/3.jpg" alt="">
+          </mat-option>
+          <mat-option value="/assets/images/4.jpg">
+            <img src="/assets/images/4.jpg" alt="">
+          </mat-option>
+          <mat-option value="/assets/images/5.jpg">
+            <img src="/assets/images/5.jpg" alt="">
+          </mat-option>
+          <mat-option value="/assets/images/6.jpg">
+            <img src="/assets/images/6.jpg" alt="">
+          </mat-option>
+          <mat-option value="/assets/images/7.jpg">
+            <img src="/assets/images/7.jpg" alt="">
+          </mat-option>
+          <mat-option value="/assets/images/8.jpg">
+            <img src="/assets/images/8.jpg" alt="">
+          </mat-option>
+          <mat-option value="/assets/images/9.jpg">
+            <img src="/assets/images/9.jpg" alt="">
+          </mat-option>
+          <mat-option value="/assets/images/10.jpg">
+            <img src="/assets/images/10.jpg" alt="">
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill" class="example-full-width form-group">
+        <mat-label>
+          <mat-icon> sentiment_satisfied_alt</mat-icon>
+          Come ti senti oggi?
+        </mat-label>
+        <mat-select matSelect required name="newEmoji" formControlName="newEmoji" id="newEmoji">
+          <mat-option></mat-option>
+          <mat-option value="tag_faces">
+            <mat-icon>tag_faces</mat-icon>
+          </mat-option>
+          <mat-option value="Triste">
+            <mat-icon>mood_bad</mat-icon>
+          </mat-option>
+          <mat-option value="Bhoo">
+            <mat-icon>sentiment_dissatisfied</mat-icon>
+          </mat-option>
+          <mat-option value="Pensieroso">
+            <mat-icon>sentiment_satisfied</mat-icon>
+          </mat-option>
+          <mat-option value="Felicissimo">
+            <mat-icon>sentiment_very_satisfied</mat-icon>
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary" [disabled]="heroForm.invalid">Pubblica</button>
+
+    </form>
+  </div>
+</div>

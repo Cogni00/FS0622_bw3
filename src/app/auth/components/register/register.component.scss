@@ -7,14 +7,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #171717;
+  background: linear-gradient(-45deg,#29662c, #4cc950,  #a5d6a7);
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px;
+  width: 350px;
 }
 
 .example-form {
@@ -42,6 +44,7 @@
 }
 
 
+
 mat-option{
   height: 80px;
   text-align: center;
@@ -59,4 +62,5 @@ mat-card-footer {
     color: red;
   }
 }
+
 
