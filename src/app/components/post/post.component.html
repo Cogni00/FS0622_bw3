@@ -3,20 +3,7 @@
   <form class="example-form-2" #form="ngForm" (ngSubmit)="sendPost(form)">
     <div class="post">
       <h2>Crea un post</h2>
-    </div>
-    <!-- <mat-form-field class="example-full-width">
-        <mat-label>Titolo</mat-label>
-        <input matInput type="text" required name="title" #title="ngModel" ngModel id="title">
-        <mat-error *ngIf="title.touched && title.invalid" ngModule>
-          Please enter a valid title address
-        </mat-error>
-        <mat-error *ngIf="title.touched && title.invalid">
-          Title is <strong>required</strong>
-        </mat-error>
-      </mat-form-field> -->
-
-
-
+    </div> 
     <mat-form-field class="example-full-width">
       <mat-label class="mat-label"> A cosa stai pensando oggi ?</mat-label>
       <input matInput type="text" required name="description" #description="ngModel" ngModel id="description">
