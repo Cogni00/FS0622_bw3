@@ -52,7 +52,7 @@ mat-card-header {
   width: 80px;
   position: absolute;
   top: -3%;
-  right: -14%;
+  right: -16%;
   border-left: none;
   border-radius: 5px 5px 20px 20px;
   animation: open 0.5s ease-in-out;
@@ -73,6 +73,11 @@ mat-card-header {
     margin: 0px auto;
     font-size: 17px;
   }
+
+  button {
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .toggle {
@@ -84,9 +89,11 @@ mat-card-content {
   height: auto;
   width: 100%;
 
-  h3 {
-    font-weight: bold;
-    margin-left: 10px;
+
+
+  img{
+    width: 90%;
+    margin-left: 20px;
   }
 
   p {
@@ -145,12 +152,16 @@ mat-card-footer {
     }
 
     .mat-raised-button {
-      min-width: 32px !important;
+      min-width: 32px;
       margin-left: 10px;
     }
 
   }
 
+}
+
+.hide {
+  display: none;
 }
 
 
@@ -167,3 +178,44 @@ mat-card-footer {
     transform: translateX(0px);
   }
 }
+
+
+@media screen and (min-width: 768px) {
+  .moreOption {
+    right: -38%;
+  }
+
+  .mat-raised-button {
+    padding: 0;
+    min-width: 0;
+    line-height: 20px;
+  }
+
+  #addComment {
+    min-width: 22px;
+  }
+
+  #imgPost {
+    margin-left: 10px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .moreOption {
+    right: -28%;
+  }
+
+  #addComment {
+    min-width: 30px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .moreOption {
+    right: -18%;
+  }
+}
+
+

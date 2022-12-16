@@ -15,9 +15,12 @@ export class ProfileComponent implements OnInit {
  name!: string;
  posts: Post[] = []
  surname!: string;
- user_id! : number
+ user_id! : number;
+ avatar! : string;
+ err!: string;
 
-  constructor(private postSrv:PostService) { }
+
+  constructor(private postSrv: PostService) { }
 
   ngOnInit(): void {
     this.getName();
@@ -25,10 +28,20 @@ export class ProfileComponent implements OnInit {
     this.getPost()
   }
 
-   getPost() {
+  getPost() {
     this.postSrv.getPostById().subscribe((res) => {
-      this.posts = res
+
       console.log(res);
+      if (res.length === 0) {
+        console.log("Array is empty!")
+        this.err = `Non hai ancora postato nulla. Inizia subito!`
+
+
+      }else{
+        this.posts = res
+      }
+
+
     })
   }
 
@@ -37,6 +50,7 @@ export class ProfileComponent implements OnInit {
     let y = JSON.parse(x)
     this.name = y.user.name
     this.surname = y.user.surname
+    this.avatar = y.user.avatar
   }
 
 

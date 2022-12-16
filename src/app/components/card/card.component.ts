@@ -1,10 +1,12 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs';
-import { AuthData } from 'src/app/auth/auth.service';
-import { Post, PostGet, PostPut, User } from 'src/app/interface/post';
+import { Auth } from 'src/app/auth/auth';
+import { Post, PostGet } from 'src/app/interface/post';
 import { PostService } from 'src/app/service/post.service';
+import { ModifyPostComponent } from './modify-post/modify-post.component';
 
 @Component({
   selector: 'app-card',
@@ -17,11 +19,16 @@ export class CardComponent implements OnInit {
 
   name!: string
   surname!: string
+
+  avatar!: string
+  default_img = '/assets/icon/default.png'
+
   id!: number
 
   loggedName!: string
   loggedSurname!: string
   loggedId!: number
+
 
   data!: string
 
@@ -38,9 +45,11 @@ export class CardComponent implements OnInit {
 
 
   @ViewChild('form') form!: NgForm
-  @ViewChild('user') user!: AuthData
+  @ViewChild('user') user!: Auth
 
-  constructor(private postSrv: PostService, private r: Router) { }
+
+
+  constructor(private postSrv: PostService, private r: Router, private dialogRef: MatDialog) { }
 
   ngOnInit(): void {
     this.getFavorites()
@@ -108,14 +117,25 @@ export class CardComponent implements OnInit {
 
 
   visualizzaDati(p: Post) {
-    console.log('funziono');
 
-    let data = {
-      newTitle: p.title,
-      newDescription: p.description,
-      newEmoji: p.emoji
-    }
-    this.form.setValue(data)
+    this.dialogRef.open(ModifyPostComponent, {
+      data: {
+        title: p.title,
+        description: p.description,
+        emoji: p.emoji,
+        img: p.img,
+        id: p.id,
+        user_id: p.user_id,
+        commenti: p.commenti,
+        date: p.date
+      },
+    })
+
+  }
+
+  close() {
+    let m = document.getElementById('modifyForm')
+    m!.classList.toggle('hide')
   }
 
 
@@ -123,6 +143,7 @@ export class CardComponent implements OnInit {
     let data: Post = {
       title: this.form.value.newTitle,
       description: this.form.value.newDescription,
+      img: this.form.value.newImg,
       emoji: this.form.value.newEmoji,
       id: this.p.id,
       user_id: this.p.user_id,
@@ -140,6 +161,7 @@ export class CardComponent implements OnInit {
       title: p.title,
       description: p.description,
       emoji: p.emoji,
+      img: p.img,
       commenti: p.commenti,
       date: p.date,
       user_id: p.user_id
@@ -178,9 +200,19 @@ export class CardComponent implements OnInit {
       let user = res
       this.name = user.name
       this.surname = user.surname
+
+      if (this.avatar = user.avatar) {
+        this.avatar = user.avatar
+      } else {
+        this.avatar = this.default_img
+      }
+
       this.id = user.id
+
     })
   }
+
+
 
   formaData() {
     var a = this.p.date.mese
