@@ -66,6 +66,7 @@
           <mat-icon> sentiment_satisfied_alt</mat-icon>
           Come ti senti oggi?
         </mat-label>
+        <mat-icon>{{emoji.value}}</mat-icon>
         <mat-select matSelect required name="emoji" #emoji="ngModel" ngModel id="emoji">
           <mat-option></mat-option>
           <mat-option value="tag_faces">

@@ -1,41 +1,6 @@
 {
   "users": [
     {
-      "email": "prova@hotmail.it",
-      "password": "$2a$10$VV9THof2iwUjFQdymXK08OpC87sG4.M054opU8fnQplh.x7nDGL8C",
-      "name": "Lorenzo",
-      "surname": "De Carolis",
-      "id": 1
-    },
-    {
-      "email": "davide@david.it",
-      "password": "$2a$10$SNbPQMHskKBTSvcYnanahe6o57apbCVI2cPtBXV41KD7vM1Glf7Qm",
-      "name": "Davide",
-      "surname": "Alfonsi",
-      "id": 2
-    },
-    {
-      "email": "luca@david.it",
-      "password": "$2a$10$2mSkGEHe2fyt3wpspmjDnezboc91eUnJZwpmCWpQSuBX4MYEuzmd6",
-      "name": "Luca",
-      "surname": "Alfonsi",
-      "id": 3
-    },
-    {
-      "email": "ilaria.cognata@gmail.com",
-      "password": "$2a$10$mZOkhDjCQMEWiw1bGpaW1uqCjrP58vzLqNj5D0OlGJBOlCapPkzqq",
-      "name": "ilaria",
-      "surname": "cognata",
-      "id": 4
-    },
-    {
-      "email": "prova1@hotmail.it",
-      "password": "$2a$10$2jWZ2C7SVi7XcbNLxh1emevdTUg1y6YfZSqP27qDRUT85p4j2ratu",
-      "name": "Lorenzo",
-      "surname": "Altomonte",
-      "id": 3
-    },
-    {
       "email": "d@david.it",
       "password": "$2a$10$1PzAXbeUuREO/ZPb5vcgjue0CWxK21KVj4cQ8F5uyPy6eLwX5QxMi",
       "name": "luca",
@@ -58,68 +23,52 @@
       "surname": "Tucci",
       "avatar": "/assets/icon/19.png",
       "id": 7
+    },
+    {
+      "email": "l@david.it",
+      "password": "$2a$10$0nSmAlfcFahRvUDNVIZKYeCql2knxzRJ8SuRGIdyXpR4G3MHSGiqO",
+      "name": "Luca",
+      "surname": "Alfonsi",
+      "avatar": "/assets/icon/4.png",
+      "id": 8
     }
   ],
   "post": [
     {
-      "title": "cacca",
-      "description": "caccaaaaaa",
-      "img": "/assets/images/4.jpg",
-      "emoji": "Triste",
-      "id": 1,
-      "user_id": 1,
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 15,
-        "ora": 15,
-        "minuti": 3
-      }
-    },
-    {
-      "user_id": 1,
-      "title": "fffff",
-      "description": "ffffffffffffffff",
-      "img": "/assets/images/1.jpg",
-      "emoji": "Bhoo",
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 15,
-        "ora": 15,
-        "minuti": 4
-      },
-      "id": 2
-    },
-    {
-      "title": "Ciao",
-      "description": "stdtdtft jbie casualmente, a volte di proposito (ad esempio inserendo passaggi ironici).",
-      "img": "/assets/images/2.jpg",
-      "emoji": "tag_faces",
-      "id": 4,
-      "user_id": 5,
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 15,
-        "ora": 17,
-        "minuti": 15
-      }
-    },
-    {
-      "user_id": 5,
       "title": "ciao",
       "description": "ciao",
-      "img": "/assets/images/1.jpg",
       "emoji": "Pensieroso",
-      "commenti": [],
+      "img": "/assets/images/1.jpg",
+      "commenti": [
+        {
+          "comment": "a",
+          "userName": "luca",
+          "userSurname": "luca"
+        }
+      ],
       "date": {
         "mese": 11,
         "giorno": 15,
         "ora": 17,
         "minuti": 16
       },
+      "user_id": 5,
       "id": 5
+    },
+    {
+      "title": "hgg",
+      "description": "gggg",
+      "img": "/assets/images/4.jpg",
+      "emoji": "Pensieroso",
+      "id": 6,
+      "user_id": 5,
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 11,
+        "minuti": 56
+      }
     }
   ],
   "favorites": [

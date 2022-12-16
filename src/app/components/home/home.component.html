@@ -3,34 +3,47 @@
   <mat-drawer mode="side" opened>
     <mat-list role="list">
       <mat-list-item role="listitem">
-        <a [routerLink]="['']"> <mat-icon>home</mat-icon></a>
-         <p>Home</p>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <a [routerLink]="['profile']"> <mat-icon>account_circle</mat-icon></a>
-           <p>Il tuo profilo</p>
-          </mat-list-item>
+        <a [routerLink]="['']"> <mat-icon>home</mat-icon>
+        <p>Home</p>
+      </a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a [routerLink]="['profile']"> <mat-icon>account_circle</mat-icon></a>
+        <p>Il tuo profilo</p>
+      </mat-list-item>
       <hr>
       <h3>GAMES</h3>
       <mat-list-item role="listitem">
-         <a [routerLink]="['/tris']"
-          routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a [routerLink]="['/tris']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <mat-icon>videogame_asset</mat-icon>
         </a>
         <p>Tetris</p>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-        <a [routerLink]="['/memory']"
-            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            <mat-icon>videogame_asset</mat-icon>
-            </a>
-            <p>Memory</p>
-            </mat-list-item>
-      <mat-list-item role="listitem"> <button id="logout" mat-flat-button
-          (click)="logout()">
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a [routerLink]="['/memory']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <mat-icon>videogame_asset</mat-icon>
+        </a>
+        <p>Memory</p>
+      </mat-list-item>
+      <hr>
+      <h3>CONTATTI</h3>
+      <mat-list-item class="none">
+      <div class="utenti-2">
+        <ul>
+          <li *ngFor="let u of users">
+            <div class="badge-container">
+              <div class="badge"></div>
+              <img matChipAvatar src="{{u.avatar}}" width="30" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </mat-list-item>
+
+      <mat-list-item role="listitem"> <button id="logout" mat-flat-button (click)="logout()">
           <mat-icon>exit_to_app</mat-icon>
           <span>Logout</span>
-          </button></mat-list-item>
+        </button></mat-list-item>
     </mat-list>
   </mat-drawer>
 
@@ -44,7 +57,21 @@
       </mat-chip-list>
     </div>
 
-   
+
+    <div class="utenti block">
+      <ul>
+        <h4>Contatti</h4>
+        <li *ngFor="let u of users">
+          <mat-chip>
+            <div class="badge"></div>
+            <img matChipAvatar src="{{u.avatar}}" />
+            {{u.name}}
+          </mat-chip>
+        </li>
+      </ul>
+    </div>
+
+
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
