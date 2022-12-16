@@ -20,6 +20,7 @@
         <mat-label>
           Vuoi modificare l'immagine per il tuo post?
         </mat-label>
+        <img src="{{heroForm.value.newImg}}" width="150px" alt="">
         <mat-select matSelect required name="newImg" formControlName="newImg" id="newImg">
           <mat-option></mat-option>
           <mat-option value="/assets/images/1.jpg">
@@ -63,20 +64,20 @@
         </mat-label>
         <mat-select matSelect required name="newEmoji" formControlName="newEmoji" id="newEmoji">
           <mat-option></mat-option>
-          <mat-option value="tag_faces">
-            <mat-icon>tag_faces</mat-icon>
+          <mat-option value="😀 Felice">
+            😀 Felice
           </mat-option>
-          <mat-option value="Triste">
-            <mat-icon>mood_bad</mat-icon>
+          <mat-option value="☹️ Triste">
+            ☹️ Triste
           </mat-option>
-          <mat-option value="Bhoo">
-            <mat-icon>sentiment_dissatisfied</mat-icon>
+          <mat-option value="🤔 Pensieroso">
+            🤔 Pensieroso
           </mat-option>
-          <mat-option value="Pensieroso">
-            <mat-icon>sentiment_satisfied</mat-icon>
+          <mat-option value="🥳 Allegro">
+            🥳 Allegro
           </mat-option>
-          <mat-option value="Felicissimo">
-            <mat-icon>sentiment_very_satisfied</mat-icon>
+          <mat-option value="😄 Felicissimo">
+            😄 Felicissimo
           </mat-option>
         </mat-select>
       </mat-form-field>

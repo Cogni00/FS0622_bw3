@@ -5,6 +5,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject } from 'rxjs';
 import { Auth } from './auth';
 import { catchError, tap } from 'rxjs/operators';
+import { User } from '../interface/post';
 
 
 
@@ -67,6 +68,12 @@ export class AuthService {
     }
     this.authSub.next(userData);
     this.autoLogout(userData);
+  }
+
+  stampa(){
+    return this.http.get<User[]>(`${this.URL}/users`).pipe(catchError(err=>{
+      throw err
+    }))
   }
 
 }

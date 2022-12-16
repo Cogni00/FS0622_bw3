@@ -29,6 +29,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatBadgeModule} from '@angular/material/badge';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
@@ -91,7 +92,8 @@ import { RestartDialogComponent } from './components/memory/restart-dialog/resta
     MatToolbarModule,
     MatMenuModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatBadgeModule
   ],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
