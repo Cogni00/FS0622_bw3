@@ -5,6 +5,7 @@
       "password": "$2a$10$VV9THof2iwUjFQdymXK08OpC87sG4.M054opU8fnQplh.x7nDGL8C",
       "name": "Lorenzo",
       "surname": "De Carolis",
+      "avatar": "/assets/icon/1.png",
       "id": 1
     },
     {
@@ -64,31 +65,56 @@
     {
       "title": "cacca",
       "description": "caccaaaaaa",
-      "img": "/assets/images/4.jpg",
       "emoji": "Triste",
-      "id": 1,
-      "user_id": 1,
-      "commenti": [],
+      "img": "/assets/images/4.jpg",
+      "commenti": [
+        {
+          "comment": "edfawd",
+          "userName": "Lorenzo",
+          "userSurname": "De Carolis",
+          "userAvatar": "/assets/icon/1.png"
+        },
+        {
+          "comment": "awdwadawdawd",
+          "userName": "Davide",
+          "userSurname": "Alfonsi",
+          "userAvatar": "/assets/icon/default.png"
+        },
+        {
+          "comment": "awdwdwd",
+          "userName": "Davide",
+          "userSurname": "Alfonsi",
+          "userAvatar": "/assets/icon/default.png"
+        }
+      ],
       "date": {
         "mese": 11,
         "giorno": 15,
         "ora": 15,
         "minuti": 3
-      }
+      },
+      "user_id": 1,
+      "id": 1
     },
     {
-      "user_id": 1,
       "title": "fffff",
       "description": "ffffffffffffffff",
-      "img": "/assets/images/1.jpg",
       "emoji": "Bhoo",
-      "commenti": [],
+      "img": "/assets/images/1.jpg",
+      "commenti": [
+        {
+          "comment": "zcef",
+          "userName": "Lorenzo",
+          "userSurname": "De Carolis"
+        }
+      ],
       "date": {
         "mese": 11,
         "giorno": 15,
         "ora": 15,
         "minuti": 4
       },
+      "user_id": 1,
       "id": 2
     },
     {

@@ -30,7 +30,9 @@
 </mat-card-actions>
 
 <mat-card-content class="commenti" *ngFor="let c of p.commenti">
-  <p><span>{{c.userName}} {{c.userSurname}}</span>{{c.comment}} </p>
+
+  <p><span class="cUser"><img src="{{c.userAvatar}}" class="comment-circle"> {{c.userName}} {{c.userSurname}}</span>
+    <span class="commento">{{c.comment}}</span> </p>
 </mat-card-content>
 
 <mat-card-footer id="footer{{p.id}}" class="display">
