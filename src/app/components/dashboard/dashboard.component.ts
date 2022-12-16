@@ -13,18 +13,18 @@ export class DashboardComponent implements OnInit {
 
   posts: Post[] = []
   name!: string
-  avatar!:string
+  avatar!: string
   default_img = '/assets/icon/default.png'
 
 
-  constructor(private postSrv:PostService , private dialogRef:MatDialog) { }
+  constructor(private postSrv: PostService, private dialogRef: MatDialog) { }
 
   ngOnInit(): void {
     this.getPost();
     this.getName();
   }
 
-  openDialog(){
+  openDialog() {
     this.dialogRef.open(PostComponent)
   }
 
@@ -32,17 +32,17 @@ export class DashboardComponent implements OnInit {
     let x: any = localStorage.getItem('user')
     let y = JSON.parse(x)
     this.name = y.user.name
-    if(this.avatar = y.user.avatar){
+    if (this.avatar = y.user.avatar) {
       this.avatar = y.user.avatar
-    }else{
+    } else {
       this.avatar = this.default_img
     }
   }
 
   getPost() {
     this.postSrv.getPost().subscribe((res) => {
-      this.posts = res
-      console.log(res);
+      this.posts = res.reverse()
+      console.log(this);
     })
   }
 }

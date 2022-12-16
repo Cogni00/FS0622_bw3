@@ -1,10 +1,380 @@
 {
   "users": [
+    {
+      "email": "prova@hotmail.it",
+      "password": "$2a$10$9D0.yqk/1pXVxNPJzKsefuE4qvveTqC052tKn6QxXTobO.zACliQG",
+      "name": "Lorenzo",
+      "surname": "De Carolis",
+      "avatar": "/assets/icon/8.png",
+      "id": 1
+    },
+    {
+      "email": "lore@alto.it",
+      "password": "$2a$10$4U7bhtI8Kgk6wis4fRrJ2emdWV9aJlaalBao1L1C3q6TUP7xs4u8S",
+      "name": "Lorenzo",
+      "surname": "Altomonte",
+      "avatar": "/assets/icon/13.png",
+      "id": 2
+    },
+    {
+      "email": "ilaria@ilaria.it",
+      "password": "$2a$10$qdZSiTBfudrIzt5P2w9Ur.Vyx2SIRezpQOwQn1aElpx1OIDdKiVoC",
+      "name": "Ilaria",
+      "surname": "Cognata",
+      "avatar": "/assets/icon/11.png",
+      "id": 3
+    },
+    {
+      "email": "giulia@giulia.it",
+      "password": "$2a$10$Di4dlLCiWCWajE1N0IJRx.VlPNE0IDPH0CSqyFXjzWUnMPheS/5RG",
+      "name": "Giulia",
+      "surname": "Franzosi",
+      "avatar": "/assets/icon/7.png",
+      "id": 4
+    },
+    {
+      "email": "davide@davide.it",
+      "password": "$2a$10$5WugBppTm0tevBHLNjZXUuNF6MsJESCfc5blyc7Vvs5Yt/LCCPJ5C",
+      "name": "Davide",
+      "surname": "Alfonsi",
+      "avatar": "/assets/icon/16.png",
+      "id": 5
+    },
+    {
+      "email": "andrea@cursi.it",
+      "password": "$2a$10$.5QXQuRo7ZRQKCPI3szKNuhDl5p48lsicpoTsPBdjOceRmcYG9dli",
+      "name": "Andrea",
+      "surname": "Cursi",
+      "avatar": "/assets/icon/6.png",
+      "id": 6
+    }
   ],
   "post": [
-   
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos, in natus facere exercitationem voluptatem vitae qui odit id voluptatibus culpa sunt maiores nesciunt obcaecati molestias rem perspiciatis sequi excepturi!",
+      "emoji": "😀 Felice",
+      "img": "/assets/images/3.jpg",
+      "commenti": [
+        {
+          "comment": "Che bellooo",
+          "userName": "Lorenzo",
+          "userSurname": "Altomonte",
+          "userAvatar": "/assets/icon/13.png"
+        },
+        {
+          "comment": "wow",
+          "userName": "Giulia",
+          "userSurname": "Franzosi",
+          "userAvatar": "/assets/icon/7.png"
+        },
+        {
+          "comment": "che cucciolo",
+          "userName": "Andrea",
+          "userSurname": "Cursi",
+          "userAvatar": "/assets/icon/6.png"
+        }
+      ],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 16,
+        "minuti": 46
+      },
+      "user_id": 1,
+      "id": 1
+    },
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos, in natus facere exercitationem voluptatem vitae qui odit id voluptatibus culpa sunt maiores nesciunt obcaecati molestias rem perspiciatis sequi excepturi!",
+      "emoji": "🤔 Pensieroso",
+      "img": "/assets/images/1.jpg",
+      "commenti": [
+        {
+          "comment": "Bella bici",
+          "userName": "Lorenzo",
+          "userSurname": "Altomonte",
+          "userAvatar": "/assets/icon/13.png"
+        }
+      ],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 16,
+        "minuti": 46
+      },
+      "user_id": 1,
+      "id": 2
+    },
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos, in natus facere exercitationem voluptatem vitae qui odit id voluptatibus culpa sunt maiores nesciunt obcaecati molestias rem perspiciatis sequi excepturi!",
+      "emoji": "🥳 Allegro",
+      "img": "/assets/images/6.jpg",
+      "commenti": [
+        {
+          "comment": "wow",
+          "userName": "Ilaria",
+          "userSurname": "Cognata",
+          "userAvatar": "/assets/icon/11.png"
+        }
+      ],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 16,
+        "minuti": 52
+      },
+      "user_id": 2,
+      "id": 3
+    },
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos, in natus facere exercitationem voluptatem vitae qui odit id voluptatibus culpa sunt maiores nesciunt obcaecati molestias rem perspiciatis sequi excepturi!",
+      "emoji": "🤔 Pensieroso",
+      "img": "/assets/images/8.jpg",
+      "commenti": [
+        {
+          "comment": "gnam",
+          "userName": "Davide",
+          "userSurname": "Alfonsi",
+          "userAvatar": "/assets/icon/16.png"
+        }
+      ],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 16,
+        "minuti": 54
+      },
+      "user_id": 3,
+      "id": 4
+    },
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos, in natus facere exercitationem voluptatem vitae qui odit id voluptatibus culpa sunt maiores nesciunt obcaecati molestias rem perspiciatis sequi excepturi!",
+      "emoji": "😀 Felice",
+      "img": "/assets/images/2.jpg",
+      "commenti": [
+        {
+          "comment": "che gol!",
+          "userName": "Davide",
+          "userSurname": "Alfonsi",
+          "userAvatar": "/assets/icon/16.png"
+        }
+      ],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 16,
+        "minuti": 55
+      },
+      "user_id": 4,
+      "id": 5
+    },
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos, in natus facere exercitationem voluptatem vitae qui odit id voluptatibus culpa sunt maiores nesciunt obcaecati molestias rem perspiciatis sequi excepturi!",
+      "emoji": "☹️ Triste",
+      "img": "/assets/images/4.jpg",
+      "commenti": [
+        {
+          "comment": "ciao",
+          "userName": "Andrea",
+          "userSurname": "Cursi",
+          "userAvatar": "/assets/icon/6.png"
+        }
+      ],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 16,
+        "minuti": 55
+      },
+      "user_id": 4,
+      "id": 6
+    },
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos, in natus facere exercitationem voluptatem vitae qui odit id voluptatibus culpa sunt maiores nesciunt obcaecati molestias rem perspiciatis sequi excepturi!",
+      "emoji": "😄 Felicissimo",
+      "img": "/assets/images/5.jpg",
+      "commenti": [
+        {
+          "comment": "non guardate avatar!",
+          "userName": "Davide",
+          "userSurname": "Alfonsi",
+          "userAvatar": "/assets/icon/16.png"
+        },
+        {
+          "comment": "concordo",
+          "userName": "Lorenzo",
+          "userSurname": "De Carolis",
+          "userAvatar": "/assets/icon/8.png"
+        }
+      ],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 16,
+        "minuti": 56
+      },
+      "user_id": 4,
+      "id": 7
+    },
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos, in natus facere exercitationem voluptatem vitae qui odit id voluptatibus culpa sunt maiores nesciunt obcaecati molestias rem perspiciatis sequi excepturi!",
+      "emoji": "🤔 Pensieroso",
+      "img": "/assets/images/9.jpg",
+      "commenti": [
+        {
+          "comment": "htlm",
+          "userName": "Andrea",
+          "userSurname": "Cursi",
+          "userAvatar": "/assets/icon/6.png"
+        },
+        {
+          "comment": "wow",
+          "userName": "Lorenzo",
+          "userSurname": "De Carolis",
+          "userAvatar": "/assets/icon/8.png"
+        }
+      ],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 16,
+        "minuti": 57
+      },
+      "user_id": 5,
+      "id": 8
+    },
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos, in natus facere exercitationem voluptatem vitae qui odit id voluptatibus culpa sunt maiores nesciunt obcaecati molestias rem perspiciatis sequi excepturi!",
+      "emoji": "😀 Felice",
+      "img": "/assets/images/10.jpg",
+      "commenti": [
+        {
+          "comment": "hulk spacca",
+          "userName": "Andrea",
+          "userSurname": "Cursi",
+          "userAvatar": "/assets/icon/6.png"
+        },
+        {
+          "comment": "che bello",
+          "userName": "Lorenzo",
+          "userSurname": "De Carolis",
+          "userAvatar": "/assets/icon/8.png"
+        }
+      ],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 16,
+        "minuti": 58
+      },
+      "user_id": 6,
+      "id": 9
+    }
   ],
   "favorites": [
-    
+    {
+      "postId": 1,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "postId": 1,
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "postId": 2,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "postId": 3,
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "postId": 1,
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "postId": 3,
+      "userId": 4,
+      "id": 6
+    },
+    {
+      "postId": 2,
+      "userId": 4,
+      "id": 7
+    },
+    {
+      "postId": 1,
+      "userId": 5,
+      "id": 8
+    },
+    {
+      "postId": 2,
+      "userId": 5,
+      "id": 9
+    },
+    {
+      "postId": 4,
+      "userId": 5,
+      "id": 10
+    },
+    {
+      "postId": 6,
+      "userId": 5,
+      "id": 11
+    },
+    {
+      "postId": 7,
+      "userId": 5,
+      "id": 12
+    },
+    {
+      "postId": 1,
+      "userId": 6,
+      "id": 13
+    },
+    {
+      "postId": 3,
+      "userId": 6,
+      "id": 14
+    },
+    {
+      "postId": 6,
+      "userId": 6,
+      "id": 15
+    },
+    {
+      "postId": 8,
+      "userId": 6,
+      "id": 16
+    },
+    {
+      "postId": 2,
+      "userId": 6,
+      "id": 17
+    },
+    {
+      "postId": 9,
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "postId": 8,
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "postId": 7,
+      "userId": 1,
+      "id": 20
+    },
+    {
+      "postId": 6,
+      "userId": 1,
+      "id": 21
+    }
   ]
 }
