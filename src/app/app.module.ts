@@ -58,7 +58,7 @@ import { RestartDialogComponent } from './components/memory/restart-dialog/resta
     ProfileComponent,
     TrisComponent,
     SquareComponent,
-    ModifyPostComponent
+    ModifyPostComponent,
     MemoryComponent,
     GameCardComponent,
     RestartDialogComponent
