@@ -1,17 +1,39 @@
-<mat-drawer-container class="example-container">
+<mat-drawer-container class="example-container" id="container-fluid">
+
   <mat-drawer mode="side" opened>
     <mat-list role="list">
-      <mat-list-item role="listitem"><mat-icon>home</mat-icon> <a [routerLink]="['']">Home</a></mat-list-item>
-      <mat-list-item role="listitem"><mat-icon>account_circle</mat-icon><a [routerLink]="['profile']">Il tuo profilo</a></mat-list-item>
+      <mat-list-item role="listitem">
+        <a [routerLink]="['']"> <mat-icon>home</mat-icon></a>
+         <p>Home</p>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <a [routerLink]="['profile']"> <mat-icon>account_circle</mat-icon></a>
+           <p>Il tuo profilo</p>
+          </mat-list-item>
       <hr>
       <h3>GAMES</h3>
-      <mat-list-item role="listitem"><mat-icon>videogame_asset</mat-icon> <a [routerLink]="['/tris']"
-          routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Tris</a></mat-list-item>
+      <mat-list-item role="listitem">
+         <a [routerLink]="['/tris']"
+          routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <mat-icon>videogame_asset</mat-icon>
+        </a>
+        <p>Tetris</p>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+        <a [routerLink]="['/memory']"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <mat-icon>videogame_asset</mat-icon>
+            </a>
+            <p>Memory</p>
+            </mat-list-item>
       <mat-list-item role="listitem"> <button id="logout" mat-flat-button
-          (click)="logout()"><mat-icon>exit_to_app</mat-icon>
-          Logout</button></mat-list-item>
+          (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+          </button></mat-list-item>
     </mat-list>
   </mat-drawer>
+
   <mat-drawer-content>
     <div class="saluta">
       <mat-chip-list aria-label="Dog selection">
@@ -22,6 +44,21 @@
       </mat-chip-list>
     </div>
 
+    <div class="container">
+      <div class="example-f">
+        <div class="profile">
+          <div class="modal">
+            <img matChipAvatar src="{{avatar}}"/>
+          <input type="text" required name="description" #description="ngModel" ngModel id="description"
+          (click)="openDialog()" placeholder="A cosa stai pensando {{name}}?...">
+          </div>
+        </div>
+        <div class="icon">
+          <p><mat-icon> insert_emoticon</mat-icon>Emoji</p>
+          <p><mat-icon>perm_media</mat-icon>Foto/video</p>
+        </div>
+      </div>
+    </div>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

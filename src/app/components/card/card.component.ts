@@ -4,7 +4,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs';
 import { Auth } from 'src/app/auth/auth';
-import { Post, PostGet, PostPut, User } from 'src/app/interface/post';
+import { Post, PostGet } from 'src/app/interface/post';
 import { PostService } from 'src/app/service/post.service';
 import { ModifyPostComponent } from './modify-post/modify-post.component';
 

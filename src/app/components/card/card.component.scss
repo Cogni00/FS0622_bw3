@@ -90,7 +90,8 @@ mat-card-content {
   width: 100%;
 
 
-  img {
+
+  img{
     width: 90%;
     margin-left: 20px;
   }
@@ -178,6 +179,7 @@ mat-card-footer {
   }
 }
 
+
 @media screen and (min-width: 768px) {
   .moreOption {
     right: -38%;
@@ -215,3 +217,5 @@ mat-card-footer {
     right: -18%;
   }
 }
+
+

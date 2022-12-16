@@ -42,6 +42,22 @@
       "surname": "luca",
       "avatar": "/assets/icon/1.png",
       "id": 5
+    },
+    {
+      "email": "paolo@bitta.com",
+      "password": "$2a$10$sSuLFdFJkHif7rJ1fRQUhOWfFGBU0Ot2qhJU88zPXJs2BNlRIBFtm",
+      "name": "paolo",
+      "surname": "bitta",
+      "avatar": "/assets/icon/6.png",
+      "id": 6
+    },
+    {
+      "email": "linda@david.it",
+      "password": "$2a$10$ldzFeKeS.PUgsQqFWmJ/ceJy9wG/qfijQWYFEIXNDixK6p7FwpMuW",
+      "name": "Linda",
+      "surname": "Tucci",
+      "avatar": "/assets/icon/19.png",
+      "id": 7
     }
   ],
   "post": [
@@ -74,7 +90,38 @@
         "minuti": 4
       },
       "id": 2
+    },
+    {
+      "user_id": 5,
+      "title": "Ciao",
+      "description": "Astdtdtft jbie casualmente, a volte di proposito (ad esempio inserendo passaggi ironici).",
+      "img": "/assets/images/2.jpg",
+      "emoji": "tag_faces",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 15,
+        "ora": 17,
+        "minuti": 15
+      },
+      "id": 4
+      },
+    {
+      "user_id": 5,
+      "title": "ciao",
+      "description": "ciao",
+      "img": "/assets/images/1.jpg",
+      "emoji": "Pensieroso",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 15,
+        "ora": 17,
+        "minuti": 16
+      },
+      "id": 5
     }
+  
   ],
   "favorites": [
     {
