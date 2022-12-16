@@ -22,10 +22,6 @@ const routes: Routes = [
         component: DashboardComponent
       },
       {
-        path: "post",
-        component: PostComponent
-      },
-      {
         path:"profile",
         component: ProfileComponent
       },

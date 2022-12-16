@@ -52,11 +52,11 @@
       "id": 6
     },
     {
-      "email": "gino@paoli.com",
-      "password": "$2a$10$c1rf43PaLj5qPv/7I4/Qw.ApKGDg2Co/rIPTd0NMbdJDHpXtgRfgS",
-      "name": "gino",
-      "surname": "paoli",
-      "avatar": "/assets/icon/4.png",
+      "email": "linda@david.it",
+      "password": "$2a$10$ldzFeKeS.PUgsQqFWmJ/ceJy9wG/qfijQWYFEIXNDixK6p7FwpMuW",
+      "name": "Linda",
+      "surname": "Tucci",
+      "avatar": "/assets/icon/19.png",
       "id": 7
     }
   ],
@@ -92,35 +92,36 @@
       "id": 2
     },
     {
-      "user_id": 4,
-      "title": "we23e",
-      "description": "qeqewq",
+      "user_id": 5,
+      "title": "Ciao",
+      "description": "Astdtdtft jbie casualmente, a volte di proposito (ad esempio inserendo passaggi ironici).",
       "img": "/assets/images/2.jpg",
-      "emoji": "Triste",
+      "emoji": "tag_faces",
       "commenti": [],
       "date": {
         "mese": 11,
         "giorno": 15,
-        "ora": 18,
-        "minuti": 1
-      },
-      "id": 3
-    },
-    {
-      "user_id": 6,
-      "title": "dadad",
-      "description": "adsa",
-      "img": "/assets/images/3.jpg",
-      "emoji": "Triste",
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 15,
-        "ora": 18,
-        "minuti": 33
+        "ora": 17,
+        "minuti": 15
       },
       "id": 4
+      },
+    {
+      "user_id": 5,
+      "title": "ciao",
+      "description": "ciao",
+      "img": "/assets/images/1.jpg",
+      "emoji": "Pensieroso",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 15,
+        "ora": 17,
+        "minuti": 16
+      },
+      "id": 5
     }
+  
   ],
   "favorites": [
     {

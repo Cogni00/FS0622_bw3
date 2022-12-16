@@ -19,7 +19,8 @@ export class ProfileComponent implements OnInit {
  avatar! : string;
  err!: string;
 
-  constructor(private postSrv:PostService) { }
+
+  constructor(private postSrv: PostService) { }
 
   ngOnInit(): void {
     this.getName();
@@ -27,7 +28,7 @@ export class ProfileComponent implements OnInit {
     this.getPost()
   }
 
-   getPost() {
+  getPost() {
     this.postSrv.getPostById().subscribe((res) => {
 
       console.log(res);
