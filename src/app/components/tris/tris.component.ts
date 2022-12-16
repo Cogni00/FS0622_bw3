@@ -26,7 +26,7 @@ export class TrisComponent implements OnInit {
   }
 
   get player() {
-    return this.xIsNext ? 'X' : 'O'
+    return this.xIsNext ? '❌' : '⭕'
   }
 
   makeMove(idX: number) {
