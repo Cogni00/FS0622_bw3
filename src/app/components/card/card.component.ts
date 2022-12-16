@@ -19,16 +19,15 @@ export class CardComponent implements OnInit {
 
   name!: string
   surname!: string
-
   avatar!: string
+  id!: number
   default_img = '/assets/icon/default.png'
 
-  id!: number
 
   loggedName!: string
   loggedSurname!: string
   loggedId!: number
-
+  loggedAvatar!: string
 
   data!: string
 
@@ -41,7 +40,6 @@ export class CardComponent implements OnInit {
   newEmoji: string = ''
 
   count: number = 0
-
 
 
   @ViewChild('form') form!: NgForm
@@ -57,6 +55,17 @@ export class CardComponent implements OnInit {
     this.getLoggedName()
     this.getName()
     this.formaData()
+    this.getCommentAvatar()
+  }
+
+  getCommentAvatar() {
+    this.postSrv.getName(this.loggedId).subscribe((res) => {
+      if (res.avatar) {
+        this.loggedAvatar = res.avatar
+      } else {
+        this.loggedAvatar = this.default_img
+      }
+    })
   }
 
   getLoggedName() {
@@ -172,7 +181,8 @@ export class CardComponent implements OnInit {
       let newComment = {
         comment: y,
         userName: this.loggedName,
-        userSurname: this.loggedSurname
+        userSurname: this.loggedSurname,
+        userAvatar: this.loggedAvatar
       }
       let x = data.commenti.push(newComment)
       this.postSrv.postComment(data, p.id).subscribe((res => {

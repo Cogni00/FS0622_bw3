@@ -20,6 +20,7 @@ mat-card-header {
     left: 0;
   }
 
+
   mat-card-title {
     font-size: 15px;
     align-items: center;
@@ -42,6 +43,8 @@ mat-card-header {
     font-size: 22px;
     border: none;
     box-shadow: none;
+    min-width: 0;
+    line-height: 20px;
   }
 }
 
@@ -52,7 +55,7 @@ mat-card-header {
   width: 80px;
   position: absolute;
   top: -3%;
-  right: -16%;
+  right: -54px;
   border-left: none;
   border-radius: 5px 5px 20px 20px;
   animation: open 0.5s ease-in-out;
@@ -91,7 +94,7 @@ mat-card-content {
 
 
 
-  img{
+  img {
     width: 90%;
     margin-left: 20px;
   }
@@ -130,11 +133,26 @@ mat-card-actions {
     display: flex;
     flex-direction: column;
 
-    span {
+    .cUser {
       font-size: 12px;
       font-weight: bold;
+      display: flex;
+      align-items: center;
+
+      img {
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-left: 0;
+        margin-right: 5px;
+      }
     }
   }
+
+  .commento {
+    padding-left: 37px;
+  }
+
 }
 
 mat-card-footer {
@@ -152,9 +170,13 @@ mat-card-footer {
     }
 
     .mat-raised-button {
-      min-width: 32px;
+      min-width: 0px;
       margin-left: 10px;
+      line-height: 10px;
+      padding: 8px;
     }
+
+
 
   }
 
@@ -182,17 +204,13 @@ mat-card-footer {
 
 @media screen and (min-width: 768px) {
   .moreOption {
-    right: -38%;
-  }
-
-  .mat-raised-button {
-    padding: 0;
-    min-width: 0;
-    line-height: 20px;
+    right: -74px
   }
 
   #addComment {
     min-width: 22px;
+    padding: 10px;
+    line-height: 10px;
   }
 
   #imgPost {
@@ -202,20 +220,7 @@ mat-card-footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .moreOption {
-    right: -28%;
-  }
-
   #addComment {
     min-width: 30px;
-    line-height: 30px;
   }
 }
-
-@media screen and (min-width: 1200px) {
-  .moreOption {
-    right: -18%;
-  }
-}
-
-
