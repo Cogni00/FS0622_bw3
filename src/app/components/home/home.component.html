@@ -19,6 +19,13 @@
         </a>
         <p>Tetris</p>
         </mat-list-item>
+        <mat-list-item role="listitem">
+        <a [routerLink]="['/memory']"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <mat-icon>videogame_asset</mat-icon>
+            </a>
+            <p>Memory</p>
+            </mat-list-item>
       <mat-list-item role="listitem"> <button id="logout" mat-flat-button
           (click)="logout()">
           <mat-icon>exit_to_app</mat-icon>

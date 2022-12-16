@@ -1,3 +1,4 @@
+import { MemoryComponent } from './components/memory/memory.component';
 
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: "tris",
         component: TrisComponent
+      },
+      {
+        path: "memory",
+        component: MemoryComponent
       }
     ]
   }

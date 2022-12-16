@@ -44,11 +44,11 @@
       "id": 5
     },
     {
-      "email": "ciao@david.it",
-      "password": "$2a$10$7VbUXzHrlUYpfLM1hHG2b.P2jchuIPchDPA2N.R8y.6sGT2IcHtli",
-      "name": "Ciao",
-      "surname": "ciao",
-      "avatar": "/assets/icon/2.png",
+      "email": "paolo@bitta.com",
+      "password": "$2a$10$sSuLFdFJkHif7rJ1fRQUhOWfFGBU0Ot2qhJU88zPXJs2BNlRIBFtm",
+      "name": "paolo",
+      "surname": "bitta",
+      "avatar": "/assets/icon/6.png",
       "id": 6
     },
     {
@@ -94,21 +94,6 @@
     {
       "user_id": 5,
       "title": "Ciao",
-      "description": "È universalmente riconosciuto che un lettore che osserva il layout di una pagina viene distratto dal contenuto testuale se questo è leggibile. Lo scopo dell’utilizzo del Lorem Ipsum è che offre una normale distribuzione delle lettere (al contrario di quanto avviene se si utilizzano brevi frasi ripetute, ad esempio “testo qui”), apparendo come un normale blocco di testo leggibile. Molti software di impaginazione e di web design utilizzano Lorem Ipsum come testo modello. Molte versioni del testo sono state prodotte negli anni, a volte casualmente, a volte di proposito (ad esempio inserendo passaggi ironici).",
-      "img": "/assets/images/6.jpg",
-      "emoji": "tag_faces",
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 15,
-        "ora": 17,
-        "minuti": 13
-      },
-      "id": 3
-    },
-    {
-      "user_id": 5,
-      "title": "Ciao",
       "description": "Astdtdtft jbie casualmente, a volte di proposito (ad esempio inserendo passaggi ironici).",
       "img": "/assets/images/2.jpg",
       "emoji": "tag_faces",
@@ -120,7 +105,7 @@
         "minuti": 15
       },
       "id": 4
-    },
+      },
     {
       "user_id": 5,
       "title": "ciao",
@@ -135,52 +120,8 @@
         "minuti": 16
       },
       "id": 5
-    },
-    {
-      "user_id": 6,
-      "title": "ciao",
-      "description": "È universalmente riconosciuto che un lettore che osserva il layout di una pagina viene distratto dal contenuto testuale se questo è leggibile. Lo scopo dell’utilizzo del Lorem Ipsum è che offre una normale distribuzione delle lettere (al contrario di quanto avviene se si utilizzano brevi frasi ripetute, ad esempio “testo qui”), apparendo come un normale blocco di testo leggibile. Molti software di impaginazione e di web design utilizzano Lorem Ipsum come testo modello. Molte versioni del testo sono state prodotte negli anni, a volte casualmente, a volte di proposito (ad esempio inserendo passaggi ironici).",
-      "img": "/assets/images/2.jpg",
-      "emoji": "tag_faces",
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 15,
-        "ora": 18,
-        "minuti": 25
-      },
-      "id": 6
-    },
-    {
-      "user_id": 6,
-      "title": "fffd",
-      "description": "dff",
-      "img": "/assets/images/1.jpg",
-      "emoji": "tag_faces",
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 15,
-        "ora": 18,
-        "minuti": 26
-      },
-      "id": 7
-    },
-    {
-      "user_id": 6,
-      "title": "ffff",
-      "description": "ggggg",
-      "img": "/assets/images/1.jpg",
-      "emoji": "Triste",
-      "commenti": [],
-      "date": {
-        "mese": 11,
-        "giorno": 15,
-        "ora": 18,
-        "minuti": 29
-      },
-      "id": 8
     }
+  
   ],
   "favorites": [
     {
