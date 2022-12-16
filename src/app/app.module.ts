@@ -46,6 +46,7 @@ import { ModifyPostComponent } from './components/card/modify-post/modify-post.c
 import { MemoryComponent } from './components/memory/memory.component';
 import { GameCardComponent } from './components/memory/game-card/game-card.component';
 import { RestartDialogComponent } from './components/memory/restart-dialog/restart-dialog.component';
+import { FriendsComponent } from './components/friends/friends.component';
 
 
 
@@ -62,7 +63,8 @@ import { RestartDialogComponent } from './components/memory/restart-dialog/resta
     ModifyPostComponent,
     MemoryComponent,
     GameCardComponent,
-    RestartDialogComponent
+    RestartDialogComponent,
+    FriendsComponent
 
   ],
   imports: [
