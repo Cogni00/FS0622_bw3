@@ -16,7 +16,7 @@
 
 <mat-card-content>
 
-  <img src="{{p.img}}" alt="">
+  <img src="{{p.img}}" id="imgPost">
 
   <p>{{p.description}}</p>
   <span class="emoji">{{p.emoji}}</span>
@@ -43,6 +43,6 @@
         Non ha inserito il <strong>commento</strong>
       </mat-error>
     </mat-form-field>
-    <button type="submit" mat-raised-button color="primary">+</button>
+    <button type="submit" mat-raised-button color="primary" id="addComment">+</button>
   </form>
 </mat-card-footer>

@@ -117,8 +117,6 @@ export class CardComponent implements OnInit {
 
 
   visualizzaDati(p: Post) {
-    // let m = document.getElementById('modifyForm')
-    // m!.classList.toggle('hide')
 
     this.dialogRef.open(ModifyPostComponent, {
       data: {
@@ -132,14 +130,6 @@ export class CardComponent implements OnInit {
         date: p.date
       },
     })
-
-    // let data = {
-    //   newTitle: p.title,
-    //   newDescription: p.description,
-    //   newEmoji: p.emoji,
-    //   newImg: p.img
-    // }
-    // this.form.setValue(data)
 
   }
 
