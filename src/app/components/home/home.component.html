@@ -4,27 +4,32 @@
     <mat-list role="list">
       <mat-list-item role="listitem">
         <a [routerLink]="['']"> <mat-icon>home</mat-icon>
-        <p>Home</p>
-      </a>
-      </mat-list-item>
-      <mat-list-item role="listitem">
-        <a [routerLink]="['profile']"> <mat-icon>account_circle</mat-icon></a>
-        <p>Il tuo profilo</p>
-      </mat-list-item>
+
+          <p>Home</p>
+        </a>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <a [routerLink]="['profile']"> <mat-icon>account_circle</mat-icon>
+           <p>Il tuo profilo</p>
+          </a>
+          </mat-list-item>
       <hr>
       <h3>GAMES</h3>
       <mat-list-item role="listitem">
         <a [routerLink]="['/tris']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <mat-icon>videogame_asset</mat-icon>
+
+        <p>Tris</p>
+         </a>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+        <a [routerLink]="['/memory']"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <mat-icon>videogame_asset</mat-icon>
+            <p>Memory</p>
         </a>
-        <p>Tetris</p>
-      </mat-list-item>
-      <mat-list-item role="listitem">
-        <a [routerLink]="['/memory']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-          <mat-icon>videogame_asset</mat-icon>
-        </a>
-        <p>Memory</p>
-      </mat-list-item>
+            </mat-list-item>
+
       <hr>
       <h3>CONTATTI</h3>
       <mat-list-item class="none">
@@ -41,6 +46,7 @@
     </mat-list-item>
 
       <mat-list-item role="listitem"> <button id="logout" mat-flat-button (click)="logout()">
+
           <mat-icon>exit_to_app</mat-icon>
           <span>Logout</span>
         </button></mat-list-item>
@@ -58,6 +64,7 @@
     </div>
 
 
+
     <div class="utenti block">
       <ul>
         <h4>Contatti</h4>
@@ -70,7 +77,6 @@
         </li>
       </ul>
     </div>
-
 
     <router-outlet></router-outlet>
   </mat-drawer-content>
