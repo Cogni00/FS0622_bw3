@@ -12,12 +12,12 @@ import { PostService } from 'src/app/service/post.service';
 
 export class ProfileComponent implements OnInit {
 
- name!: string;
- posts: Post[] = []
- surname!: string;
- user_id! : number
+  name!: string;
+  posts: Post[] = []
+  surname!: string;
+  user_id!: number
 
-  constructor(private postSrv:PostService) { }
+  constructor(private postSrv: PostService) { }
 
   ngOnInit(): void {
     this.getName();
@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit {
     this.getPost()
   }
 
-   getPost() {
+  getPost() {
     this.postSrv.getPostById().subscribe((res) => {
       this.posts = res
       console.log(res);
