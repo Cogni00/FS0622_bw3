@@ -1,10 +1,10 @@
-<div>
-
+<div class="background">
+  <div class="nome">
+    <img src="{{ avatar }}" class="avatar-circle" alt="" />
+    <h1>{{ name | titlecase }} {{ surname | titlecase }}</h1>
+  </div>
 </div>
-<div class="nome">
-  <h1> <img src="{{ avatar }}" class="avatar-circle" alt="" />{{ name | titlecase}} {{ surname | titlecase}}</h1>
-  <h3>I tuoi post:</h3>
-</div>
+<h3>I tuoi post:</h3>
 <div class="padre">
   <div class="post">
     <h2 *ngIf="err">{{ err }}</h2>

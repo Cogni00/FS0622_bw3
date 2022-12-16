@@ -20,6 +20,7 @@ mat-list {
 h3 {
   text-align: center;
   padding-top: 10px;
+  font-weight: bold;
 }
 
 .active {
@@ -28,7 +29,8 @@ h3 {
 
 a {
   text-decoration: none;
-  color: red;
+  color: black;
+  display: flex;
 }
 
 mat-icon {
@@ -61,33 +63,7 @@ p {
 // MEDIAQUERY
 @media screen and (max-width:500px) {
 
-  h3{
-   text-align: left;
-   font-size: 12px;
-   margin-left: 5px;
-  }
 
-  mat-drawer{
-    width: 60px;
-    mat-list{
-      width: 100px;
-      mat-list-item{
-        p,
-        span{
-          display: none;
-        }
-        #logout {
-          left: -5px;
-          width: 40px;
-          font-size: 15px;
-        }
-        mat-icon {
-          margin-right: 5px;
-          font-size: 20px;
-        }
-      }
-    }
-  }
 
 
   .container {
@@ -144,7 +120,39 @@ p {
       }
     }
   }
+}
 
 
+@media screen and ( max-width:768px) {
+  h3{
+    text-align: left;
+    font-size: 12px;
+    margin-left: 5px;
+   }
+
+   mat-drawer{
+     width: 60px;
+     mat-list{
+       width: 100px;
+       mat-list-item{
+         p,
+         span{
+           display: none;
+         }
+         #logout {
+           left: -5px;
+           width: 40px;
+           font-size: 15px;
+         }
+         mat-icon {
+           margin-right: 5px;
+           font-size: 20px;
+         }
+       }
+     }
+   }
+}
+
+@media screen and (max-width:400px) {
 
 }

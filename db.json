@@ -120,6 +120,20 @@
         "minuti": 16
       },
       "id": 5
+    },
+    {
+      "user_id": 4,
+      "description": "è una bella giornata di pioggia",
+      "img": "/assets/images/6.jpg",
+      "emoji": "Triste",
+      "commenti": [],
+      "date": {
+        "mese": 11,
+        "giorno": 16,
+        "ora": 14,
+        "minuti": 4
+      },
+      "id": 6
     }
   ],
   "favorites": [
