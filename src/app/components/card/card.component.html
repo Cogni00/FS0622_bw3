@@ -15,7 +15,6 @@
 </mat-card-content>
 
 <mat-card-content>
-
   <img src="{{p.img}}" id="imgPost">
 
   <p>{{p.description}}</p>
@@ -32,7 +31,8 @@
 <mat-card-content class="commenti" *ngFor="let c of p.commenti">
 
   <p><span class="cUser"><img src="{{c.userAvatar}}" class="comment-circle"> {{c.userName}} {{c.userSurname}}</span>
-    <span class="commento">{{c.comment}}</span> </p>
+    <span class="commento">{{c.comment}}</span>
+  </p>
 </mat-card-content>
 
 <mat-card-footer id="footer{{p.id}}" class="display">

@@ -1,10 +1,10 @@
-  <div class="container-2">
+<div class="container-2">
 
-    <form class="example-form-2" #form="ngForm" (ngSubmit)="sendPost(form)">
-      <div class="post">
-        <h2>Crea un post</h2>
-      </div>
-      <!-- <mat-form-field class="example-full-width">
+  <form class="example-form-2" #form="ngForm" (ngSubmit)="sendPost(form)">
+    <div class="post">
+      <h2>Crea un post</h2>
+    </div>
+    <!-- <mat-form-field class="example-full-width">
         <mat-label>Titolo</mat-label>
         <input matInput type="text" required name="title" #title="ngModel" ngModel id="title">
         <mat-error *ngIf="title.touched && title.invalid" ngModule>
@@ -14,81 +14,79 @@
           Title is <strong>required</strong>
         </mat-error>
       </mat-form-field> -->
-  
-  
-  
-      <mat-form-field class="example-full-width">
-        <mat-label class="mat-label"> A cosa stai pensando oggi ?</mat-label>
-        <input matInput type="text" required name="description" #description="ngModel" ngModel id="description">
-      </mat-form-field>
-  
-  
-      <mat-form-field appearance="fill">
-        <img src="{{img.value}}" width="200px" alt="">
-        <mat-select matSelect required name="img" #img="ngModel" ngModel id="img">
-          <mat-option></mat-option>
-          <mat-option value="/assets/images/1.jpg">
-            <img src="/assets/images/1.jpg" alt="">
-          </mat-option>
-          <mat-option value="/assets/images/2.jpg">
-            <img src="/assets/images/2.jpg" alt="">
-          </mat-option>
-          <mat-option value="/assets/images/3.jpg">
-            <img src="/assets/images/3.jpg" alt="">
-          </mat-option>
-          <mat-option value="/assets/images/4.jpg">
-            <img src="/assets/images/4.jpg" alt="">
-          </mat-option>
-          <mat-option value="/assets/images/5.jpg">
-            <img src="/assets/images/5.jpg" alt="">
-          </mat-option>
-          <mat-option value="/assets/images/6.jpg">
-            <img src="/assets/images/6.jpg" alt="">
-          </mat-option>
-          <mat-option value="/assets/images/7.jpg">
-            <img src="/assets/images/7.jpg" alt="">
-          </mat-option>
-          <mat-option value="/assets/images/8.jpg">
-            <img src="/assets/images/8.jpg" alt="">
-          </mat-option>
-          <mat-option value="/assets/images/9.jpg">
-            <img src="/assets/images/9.jpg" alt="">
-          </mat-option>
-          <mat-option value="/assets/images/10.jpg">
-            <img src="/assets/images/10.jpg" alt="">
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-  
-  
-      <mat-form-field appearance="fill" class="">
-        <mat-label>
-          <mat-icon> sentiment_satisfied_alt</mat-icon>
-          Come ti senti oggi?
-        </mat-label>
-        <mat-select matSelect required name="emoji" #emoji="ngModel" ngModel id="emoji">
-          <mat-option></mat-option>
-          <mat-option value="tag_faces">
-            <mat-icon>tag_faces</mat-icon>
-          </mat-option>
-          <mat-option value="Triste">
-            <mat-icon>mood_bad</mat-icon>
-          </mat-option>
-          <mat-option value="Bhoo">
-            <mat-icon>sentiment_dissatisfied</mat-icon>
-          </mat-option>
-          <mat-option value="Pensieroso">
-            <mat-icon>sentiment_satisfied</mat-icon>
-          </mat-option>
-          <mat-option value="Felicissimo">
-            <mat-icon>sentiment_very_satisfied</mat-icon>
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-  
-      <button type="submit" mat-raised-button color="primary">Pubblica</button>
-  
-    </form>
-  </div>
 
 
+
+    <mat-form-field class="example-full-width">
+      <mat-label class="mat-label"> A cosa stai pensando oggi ?</mat-label>
+      <input matInput type="text" required name="description" #description="ngModel" ngModel id="description">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <img src="{{img.value}}" width="200px" alt="">
+      <mat-select matSelect required name="img" #img="ngModel" ngModel id="img">
+        <mat-option></mat-option>
+        <mat-option value="/assets/images/1.jpg">
+          <img src="/assets/images/1.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/2.jpg">
+          <img src="/assets/images/2.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/3.jpg">
+          <img src="/assets/images/3.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/4.jpg">
+          <img src="/assets/images/4.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/5.jpg">
+          <img src="/assets/images/5.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/6.jpg">
+          <img src="/assets/images/6.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/7.jpg">
+          <img src="/assets/images/7.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/8.jpg">
+          <img src="/assets/images/8.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/9.jpg">
+          <img src="/assets/images/9.jpg" alt="">
+        </mat-option>
+        <mat-option value="/assets/images/10.jpg">
+          <img src="/assets/images/10.jpg" alt="">
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" class="">
+      <mat-label>
+        <mat-icon> sentiment_satisfied_alt</mat-icon>
+        Come ti senti oggi?
+      </mat-label>
+      <mat-select matSelect required name="emoji" #emoji="ngModel" ngModel id="emoji">
+        <mat-option></mat-option>
+        <mat-option value="😀 Felice">
+          😀 Felice
+        </mat-option>
+        <mat-option value="☹️ Triste">
+          ☹️ Triste
+        </mat-option>
+        <mat-option value="🤔 Pensieroso">
+          🤔 Pensieroso
+        </mat-option>
+        <mat-option value="🥳 Allegro">
+          🥳 Allegro
+        </mat-option>
+        <mat-option value="😄 Felicissimo">
+          😄 Felicissimo
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary">Pubblica</button>
+
+  </form>
+</div>
