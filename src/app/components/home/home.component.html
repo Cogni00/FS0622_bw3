@@ -44,21 +44,7 @@
       </mat-chip-list>
     </div>
 
-    <div class="container">
-      <div class="example-f">
-        <div class="profile">
-          <div class="modal">
-            <img matChipAvatar src="{{avatar}}"/>
-          <input type="text" required name="description" #description="ngModel" ngModel id="description"
-          (click)="openDialog()" placeholder="A cosa stai pensando {{name}}?...">
-          </div>
-        </div>
-        <div class="icon">
-          <p><mat-icon> insert_emoticon</mat-icon>Emoji</p>
-          <p><mat-icon>perm_media</mat-icon>Foto/video</p>
-        </div>
-      </div>
-    </div>
+   
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
