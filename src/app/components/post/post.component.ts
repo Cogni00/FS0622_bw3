@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { catchError } from 'rxjs';
 import { PostGet } from 'src/app/interface/post';
 import { PostService } from 'src/app/service/post.service';
@@ -15,24 +16,18 @@ export class PostComponent implements OnInit {
 
   newDate!: {}
   user_id!:number
+  surname!:string
  
   DialogAnimationsExampleDialog:any
   default_img = '/assets/icon/default.png'
+  @Input() p!: any
 
 
 
-  constructor(private postSrv: PostService) { }
+  constructor(private postSrv: PostService , private r:Router) { }
 
 
-  ngOnInit(): void {
-    
-  }
-
-
-  visualizzaForm(){
-    
-  }
-
+  ngOnInit(): void {}
 
   sendPost(form: NgForm) {
     this.getDate()
@@ -52,8 +47,8 @@ export class PostComponent implements OnInit {
       throw err
     })).subscribe(res => {
       console.log(res);
-
     })
+    window.location.reload()
   }
 
   getDate() {
@@ -77,5 +72,4 @@ export class PostComponent implements OnInit {
     let y = JSON.parse(x)
     this.user_id = y.user.id
   }
-
 }

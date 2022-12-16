@@ -28,6 +28,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 
@@ -40,6 +43,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ModifyPostComponent } from './components/card/modify-post/modify-post.component';
+import { MemoryComponent } from './components/memory/memory.component';
+import { GameCardComponent } from './components/memory/game-card/game-card.component';
+import { RestartDialogComponent } from './components/memory/restart-dialog/restart-dialog.component';
+
+
 
 
 @NgModule({
@@ -51,7 +60,11 @@ import { ProfileComponent } from './components/profile/profile.component';
     DashboardComponent,
     ProfileComponent,
     TrisComponent,
-    SquareComponent
+    SquareComponent,
+    ModifyPostComponent,
+    MemoryComponent,
+    GameCardComponent,
+    RestartDialogComponent
 
   ],
   imports: [
@@ -81,7 +94,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     MatToolbarModule,
     MatMenuModule,
     MatListModule,
-
+    MatDialogModule
   ],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },

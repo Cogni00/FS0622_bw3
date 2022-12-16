@@ -1,7 +1,6 @@
 .padre {
   display:flex;
-  justify-content: space-between;
-  position: relative;
+  justify-content: center;
 }
 
 .example-card {
@@ -11,16 +10,57 @@
 }
 
 .nome {
-  margin:20px;
-  font-size: 25px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-.foto {
-  height: 280px;
-  width:  200px;
-  background-color: red;
-  position: absolute;
-  right: 50px;
+.avatar-circle {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
 
+h1 {
+  font-size: 30px;
+  align-self: flex-end;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
 
+h2{
+  text-align: center;
+}
+
+h3 {
+  font-size: 25px;
+  margin-left: 85px;
+  margin-top: 20px;
+}
+
+.background {
+  background-image: url("https://picsum.photos/2000/1100");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 40px;
+  height: 350px;
+  border-radius: 3px;
+  position: relative;
+}
+
+@media screen and (max-width:768px) {
+  .background {
+    height: 180px;
+  }
+
+  .avatar-circle {
+    height: 80px;
+    width: 80px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
 }

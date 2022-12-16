@@ -6,6 +6,45 @@
 .mat-drawer {
   height: 100%;
   background-color: #a5d6a7;
+
+  .none {
+    margin-top: 60px;
+
+    .utenti-2 {
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+        list-style: none;
+        margin-right: 65px;
+
+        li {
+          .badge-container {
+            width: fit-content;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            position: relative;
+
+            .badge {
+              height: 12px;
+              width: 12px;
+              border-radius: 50%;
+              background-color: #388E3C;
+              position: absolute;
+              right: -5px;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+h3.none {
+  margin-top: 10px !important;
 }
 
 .mat-list-base {
@@ -13,13 +52,18 @@
 }
 
 mat-list {
-  width: 30vh;
-  margin-top: 50px,
+  width: 200px;
+  margin-top: 50px;
+}
+
+mat-list-item {
+  display: flex;
 }
 
 h3 {
   text-align: center;
   padding-top: 10px;
+  font-weight: bold;
 }
 
 .active {
@@ -29,6 +73,7 @@ h3 {
 a {
   text-decoration: none;
   color: black;
+  display: flex;
 }
 
 mat-icon {
@@ -68,25 +113,226 @@ p {
   font-size: 16px;
 }
 
-button {
-  margin-left: -15px;
-  font-size: 16px;
-  background-color: #a5d6a7;
-  font-weight: 400;
+.utenti {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: fit-content;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    li {
+      margin-bottom: 10px;
+      list-style: none;
+      margin-right: 10px;
+
+      mat-chip {
+        position: relative;
+
+        .badge {
+          height: 12px;
+          width: 12px;
+          border-radius: 50%;
+          background-color: #388E3C;
+          position: absolute;
+          right: 0px;
+          top: 0;
+        }
+      }
+
+    }
+  }
 }
+
+@media screen and (min-width:993px) {
+
+  .utenti-2,
+  .none {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .block {
+    display: none;
+  }
+
+  .none {
+    display: block;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .mat-drawer {
+    height: 100%;
+    background-color: #a5d6a7;
+
+
+  }
+
+
+}
+
+
 
 #logout {
   position: fixed;
   bottom: 30px;
   color: black;
+  background-color: #a5d6a7;
+}
+
+// MEDIAQUERY
+@media screen and (max-width:500px) {
+
+  h3 {
+    text-align: left;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+
+  mat-drawer {
+    width: 60px;
+
+    mat-list {
+      width: 100px;
+
+      mat-list-item {
+
+        p,
+        span {
+          display: none;
+        }
+
+        #logout {
+          left: -5px;
+          width: 40px;
+          font-size: 15px;
+        }
+
+        mat-icon {
+          margin-right: 5px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+
+  .container {
+    .example-f {
+      position: relative;
+      height: 110px;
+
+      .profile {
+        .modal {
+          img {
+            width: 35px;
+          }
+
+          input {
+            font-size: 11px;
+          }
+        }
+      }
+
+      .icon {
+        p:nth-child(1) {
+          position: absolute;
+          left: 10px;
+          bottom: 0px;
+          font-size: 13px;
+
+          mat-icon {
+            color: orange;
+            margin-right: 0px;
+            font-size: 18px;
+          }
+        }
+
+        p:nth-child(2) {
+          position: absolute;
+          right: 10px;
+          bottom: 0px;
+          font-size: 13px;
+
+          mat-icon {
+            color: green;
+            margin-right: 0px;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .example-full-width-1 {
+        margin-bottom: 30px;
+        width: 400px;
+        padding: 5px 5px 10px 5px;
+        font-size: 15px;
+
+        input {
+          border: 1px solid transparent;
+          background-color: rgb(188, 180, 180, 0.1);
+          border-radius: 10px;
+          padding: 10px;
+          width: 380px;
+        }
+      }
+    }
+  }
 }
 
 
-/*media 768 scompaiono parole */
-@media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
   #fb{
     display: none;
 
   }
+  h3 {
+    text-align: left;
+    font-size: 12px;
+    margin-left: 5px;
+  }
 
+  h3.none {
+    margin-left: 0;
+  }
+
+  mat-drawer {
+    width: 60px;
+
+    mat-list {
+      width: 100px;
+
+      mat-list-item {
+
+        p,
+        span {
+          display: none;
+        }
+
+        #logout {
+          left: -5px;
+          width: 40px;
+          font-size: 15px;
+        }
+
+        mat-icon {
+          margin-right: 5px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
+
+

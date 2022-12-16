@@ -54,13 +54,14 @@ export class PostService {
     }))
   }
 
-  eliminaPost(id:number){
+  eliminaPost(id: number) {
     return this.http.delete(this.urlPath + `/${id}`)
   }
 
   getName(id: number) {
     return this.http.get<User>('http://localhost:4201/users/' + id)
   }
+
 
   aggiungiLike(id: number) {
     let takeUser: any = localStorage.getItem('user')

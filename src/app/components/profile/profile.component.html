@@ -1,14 +1,15 @@
-<div class="nome">
-   <h1>{{ name }} {{ surname }}</h1>
-   <h3>I tuoi post:</h3>
+<div class="background">
+  <div class="nome">
+    <img src="{{ avatar }}" class="avatar-circle" alt="" />
+    <h1>{{ name | titlecase }} {{ surname | titlecase }}</h1>
+  </div>
 </div>
+<h3>I tuoi post:</h3>
 <div class="padre">
-   <div class="post">
-      <mat-card class="example-card" *ngFor="let p of posts">
-        <app-card [p]="p"></app-card>
-      </mat-card>
-   </div>
-   <div class="foto">
-      <p>a</p>
-   </div>
+  <div class="post">
+    <h2 *ngIf="err">{{ err }}</h2>
+    <mat-card class="example-card" *ngFor="let p of posts">
+      <app-card [p]="p"></app-card>
+    </mat-card>
+  </div>
 </div>
